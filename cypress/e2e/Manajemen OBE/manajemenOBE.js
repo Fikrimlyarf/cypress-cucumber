@@ -1,4 +1,5 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
+import dataCPL from '../../fixtures/Manajemen OBE/manajemenCPL.json'
 
 Given ('Admin PT mengelola manajemen OBE Teknik Informatika', ()=> {
     cy.visit('/');
@@ -20,13 +21,22 @@ When('Admin menambahkan data {string}', (menu)=>{
             cy.get('#i_profile_lulusan').type(data.profil)
             cy.get('#i_deskripsi_id').type(data.desProfilIN)
             cy.get('#i_deskripsi_en').type(data.desProfilEN)
-            .parent()
-            .next()
-            .find('.btn.btn-success.btn-xs.btn-flat').click()
+              .parent()
+              .next()
+              .find('.btn.btn-success.btn-xs.btn-flat').click()
             cy.get('.alert').should('contain', data.alertBerhasil)
         })
     }else if(menu == "Manajemen CPL"){
         cy.get('.list-unstyled.profile-nav').contains('Manajemen CPL').click();
+        dataCPL.listCPL.forEach((cpl)=>{
+            cy.get('#addBtn').click()
+            cy.get('[name="deskripsi_id"]').type(cpl.cplID)
+            cy.get('[name="deskripsi_en"]').type(cpl.cplEN)
+            .parent()
+            .next()
+            .find('.btn.btn-success.btn-xs.btn-flat').click()
+            // cy.get('.alert').should('contain', '')
+        })
     }else if(menu == "Mapping CPL -> MK"){
         cy.get('.list-unstyled.profile-nav').contains('Mapping CPL -> MK').click();
     }

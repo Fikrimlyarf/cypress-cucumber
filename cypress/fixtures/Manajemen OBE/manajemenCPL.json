@@ -1,0 +1,12 @@
+{
+    "listCPL" : [
+        {
+            "cplID" : "cpl ke 1",
+            "cplEN" : "cpl number one"
+        },
+        {
+            "cplID" : "cpl ke 2",
+            "cplEN" : "cpl number two"
+        }
+    ]
+}
