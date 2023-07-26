@@ -17,6 +17,7 @@
 import './commands'
 import './modul'
 import './login'
+import './modalKonfirmasi'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

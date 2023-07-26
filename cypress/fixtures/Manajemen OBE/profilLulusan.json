@@ -1,6 +1,15 @@
 {
-    "profil": "Mengembangkan Aplikasi",
-    "desProfilIN": "Menciptakan mahasiswa yang mampu berkompetisi dalam pengembangan perangkat lunak",
-    "desProfilEN": "Creating students who are able to compete in software development",
+    "listPL" : [
+        {
+            "profil" : "Mengembangkan Aplikasi",
+            "profilIN" : "Menciptakan mahasiswa yang mampu berkompetisi dalam pengembangan perangkat lunak",
+            "profilEN" : "Creating students who are able to compete in software development"
+        },
+        {
+            "profil" : "Menganalisis Pengembangan Sistem",
+            "profilIN" : "Lorem impum",
+            "profilEN" : "dolorent"
+        }
+    ],
     "alertBerhasil": "Selamat! Profil Lulusan berhasil ditambahkan"
 }
