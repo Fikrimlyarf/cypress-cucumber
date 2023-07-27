@@ -15,9 +15,8 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-import './modul'
-import './login'
-import './modalKonfirmasi'
+import './Login/*.js'
+import './Custom/*.js'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
