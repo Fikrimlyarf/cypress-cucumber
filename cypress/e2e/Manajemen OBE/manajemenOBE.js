@@ -39,7 +39,7 @@ When('Admin menambahkan data {string}', (menu)=>{
             .parent()
             .next()
             .find('.btn.btn-success.btn-xs.btn-flat').click()
-            // cy.get('.alert').should('contain', '')
+            cy.get('.alert').should('be.visible')
         })
     }else if(menu == "Mapping CPL -> MK"){
         cy.get('.list-unstyled.profile-nav').contains('Mapping CPL -> MK').click();
@@ -55,7 +55,7 @@ When('Admin menghapus data {string}', (menu)=>{
                     cy.get('td').contains('1').parent()
                       .find('.btn.btn-danger.btn-xs.btn-flat').click()
                     cy.modalKonfirmasi("ya")
-                    cy.get('.alert').should('be.visible')
+                    cy.get('.alert').should('contain', 'berhasil dihapus')
                 }
             })
     }
