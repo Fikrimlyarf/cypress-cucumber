@@ -31,17 +31,17 @@ npm install moment --save-dev
 Setelah menginstal paket-paket ini, Anda perlu mengonfigurasi Cypress untuk menggunakan plugin. Konfigurasi pada file cypress config akan terlihat seperti ini:
 
 ```bash
+
 const { defineConfig } = require("cypress");
-const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
+const createBundler = require("@bahmutov/cypress-esbuild-preprocessor")
 const addCucumberPreprocessorPlugin = require("@badeball/cypress-cucumber-preprocessor").addCucumberPreprocessorPlugin;
-const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
+const createEsbuildPlugin = require ("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin
 
 module.exports = defineConfig({
-  viewportHeight: 1024,
   viewportWidth: 1280,
+  viewportHeight: 800,
   chromeWebSecurity: false,
-  experimentalStudio: true,
-  reporter: 'cypress-multi-reporters  ',
+  video: false,
   e2e: {
     async setupNodeEvents(on, config) {
       // implement node event listeners here
@@ -50,14 +50,13 @@ module.exports = defineConfig({
       })
       on("file:preprocessor", bundler)
       await addCucumberPreprocessorPlugin(on, config)
-
       return config
-    },
-    specPattern: "cypress/**/*.feature",
-    baseUrl: "your url"
+    },  
+  specPattern: "**/*.feature",
+  baseUrl: "your url"
   },
-  
 });
+
 
 ```
 
