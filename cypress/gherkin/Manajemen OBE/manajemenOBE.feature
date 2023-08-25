@@ -7,7 +7,10 @@ Feature: Test Case - Manajemen OBE
         # When Admin menambahkan data "Profil Lulusan"
         # * Admin menambahkan data "Manajemen CPL"
         # * Admin menambahkan data "Pemetaan PL -> CPL"
-        * Admin menambahkan data "Pemetaan CPL -> MK"
+        # * Admin menambahkan data "Pemetaan CPL -> MK"
+
+    Scenario: Admin Menambahkan CPMK
+        When Admin menambahkan CPMK
 
     # Scenario: Admin menghapus data Profile Lulusan
     #     When Admin menghapus data "Profil Lulusan"
