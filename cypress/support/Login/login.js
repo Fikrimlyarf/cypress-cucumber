@@ -10,5 +10,3 @@ Cypress.Commands.add("loginsuperadmin", (idrole) => {
   });
   cy.get(".btn-login").contains("Masuk").click();
 });
-
-

@@ -1,14 +1,32 @@
 {
     "listPL" : [
         {
-            "profil" : "Mengembangkan Aplikasi",
-            "profilIN" : "Menciptakan mahasiswa yang mampu berkompetisi dalam pengembangan perangkat lunak",
-            "profilEN" : "Creating students who are able to compete in software development"
+            "kodepl" : "PL 01",
+            "profil" : "Menganalisis dan mengolah data menjadi suatu informasi dan pengetahuan.",
+            "profesi" : "Ilmuwan Data",
+            "desIN" : "Memiliki kemampuan menganalisis dan mengolah data menjadi suatu informasi dan pengetahuan untuk mendukung proses pengambilan keputusan di suatu organisasi",
+            "desEN" : "Have the ability to analyze and process data into information and knowledge to support the decision-making process in an organization"
         },
         {
-            "profil" : "Menganalisis Pengembangan Sistem",
-            "profilIN" : "Lorem impum",
-            "profilEN" : "dolorent"
+            "kodepl" : "PL 02",
+            "profil" : "Melakukan tahapan pengembangan dan rekayasa ulang perangkat lunak",
+            "profesi" : "Perekayasa Perangkat Lunak",
+            "desIN" : "Memiliki kemampuan melakukan analisa kelayakan pembuatan, penerapan proyek perangkat lunak, analisa kebutuhan, perancangan, pembuatan dan penjaminan kualitas perangkat lunak serta melakukan rekayasa ulang perangkat lunak",
+            "desEN" : "Have the ability to carry out feasibility analysis of manufacture, implementation of software projects, needs analysis, design, manufacture and quality assurance of software and perform software re-engineering"
+        },
+        {
+            "kodepl" : "PL 03",
+            "profil" : "Specialist Database (Database Specialist)",
+            "profesi" : "Database Administrator",
+            "desIN" : "peran yang mencakup perancang, pembangun, perawatan (termasuk updating), hingga analisis basis data. Peran ini dapat dikerjakan antara lain oleh Database Designer, Database Programmer, Database Administrator, Analis Data (Data Analyst), Data Warehouse Analyst, dan Business Intelligence Analyst",
+            "desEN" : "roles that span from designer, builder, maintenance (including updating), to database analysis. This role can be performed by, among others, Database Designer, Database Programmer, Database Administrator, Data Analyst, Data Warehouse Analyst, and Business Intelligence Analyst"
+        },
+        {
+            "kodepl" : "PL 04",
+            "profil" : "Akademisi SI (IS Academician)",
+            "profesi" : "Sarjana Terapan",
+            "desIN" : "peran yang terkait sikap seorang intelektual seperti kritis, analitis, dan menghasilkan karya ilmiah. Peran ini dapat dikerjakan antara lain oleh mahasiswa S2 Sistem Informasi.",
+            "desEN" : "roles related to the attitude of an intellectual such as critical, analytical, and producing scientific work. This role can be carried out, among others, by Information Systems Masters students."
         }
     ],
     "alertBerhasil": "Selamat! Profil Lulusan berhasil ditambahkan"

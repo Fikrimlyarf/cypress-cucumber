@@ -1,12 +1,55 @@
 {
     "listCPL" : [
         {
-            "cplID" : "cpl ke 1",
-            "cplEN" : "cpl number one"
+            "kodeCPL" : "CPL 01",
+            "cplID" : "Kemampuan memahami konsep dan prinsip dasar sistem informasi, termasuk pemrosesan data, analisis bisnis, manajemen proyek, dan pengelolaan infrastruktur teknologi informasi.",
+            "cplEN" : "Ability to understand basic concepts and principles of information systems, including data processing, business analysis, project management, and management of information technology infrastructure.",
+            "katergori" : "Sikap"
         },
         {
-            "cplID" : "cpl ke 2",
-            "cplEN" : "cpl number two"
+            "kodeCPL" : "CPL 02",
+            "cplID" : "Mampu mengidentifikasi, memformulasikan dan memecahkan permasalahan kebutuhan informasi dari sebuah organisasi.",
+            "cplEN" : "Able to identify, formulate and solve problems the information needs of an organization.",
+            "katergori" : "Pengetahuan"
+        },
+        {
+            "kodeCPL" : "CPL 03",
+            "cplID" : "Dapat mengintegrasikan solusi berbasis teknologi informasi secara efektif pada suatu organisasi.",
+            "cplEN" : "Can integrate information technology-based solutions effectively in an organization.",
+            "katergori" : "Pengetahuan"
+        },
+        {
+            "kodeCPL" : "CPL 04",
+            "cplID" : "Mampu menerapkan konsep-konsep dasar dalam merencanakan, merancang, membangun, menguji, dan mengoperasikan sistem informasi sesuai dengan kebutuhan organisasi.",
+            "cplEN" : "Able to apply basic concepts in planning, designing, building, testing, and operating information systems according to organizational needs.",
+            "katergori" : "Keterampilan Umum"
+        },
+        {
+            "kodeCPL" : "CPL 05",
+            "cplID" : "Dapat berkarya di bidang keprofesian sistem informasi dengan perilaku etika dan nilai-nilai ketuhanan.",
+            "cplEN" : "Able to work in the field of professional information systems with ethical behavior and divine values.",
+            "katergori" : "Keterampilan Umum"
+        },
+        {
+            "kodeCPL" : "CPL 06",
+            "cplID" : "Dapat berkomunikasi dan bekerja sama secara efektif dalam tim kerja, serta memiliki karakter belajar sepanjang hayat.",
+            "cplEN" : "Able to communicate and work together effectively in work teams, and have a lifelong learning character.",
+            "katergori" : "Keterampilan Khusus"
+        },
+        {
+            "kodeCPL" : "CPL 07",
+            "cplID" : "Cakap berwirausaha. Mampu menghasilkan inovasi dalam bidang SI/TI dengan semangat berkolaborasi dan didasari jiwa kewirausahaan yang bermanfaat untuk organisasi dan masyarakat.",
+            "cplEN" : "Talk about entrepreneurship. Able to produce innovations in the field of IS/IT with a spirit of collaboration and based on an entrepreneurial spirit that is beneficial to organizations and society.",
+            "katergori" : "Keterampilan Khusus"
+        },
+        {
+            "kodeCPL" : "CPL 08",
+            "cplID" : "Mampu mengolah dan menganalisis data berskala besar, baik data terstruktur, semi terstruktur maupun tidak terstuktur yang berasal dari dalam dan luar organisasi dengan berbagai macam tools sehingga menjadi informasi dan pengetahuan yang berguna dalam mendukung pengambilan keputusan bagi pihak manajemen suatu organisasi.",
+            "cplEN" : "Able to process and analyze large-scale data, both structured, semi-structured and unstructured data originating from within and outside the organization with various tools so that it becomes information and knowledge that is useful in supporting decision making for the management of an organization.",
+            "katergori" : "Keterampilan Khusus"
         }
-    ]
+    ],
+    "alertCplBerhasil": "Selamat! Capaian Pembelajaran Lulusan berhasil ditambahkan",
+    "alertPLkeCPLBerhasil": "Pemetaan PL → CPL berhasil disimpan.",
+    "alertCPLkeMKBerhasil": "Pemetaan CPL → MK berhasil disimpan."
 }
