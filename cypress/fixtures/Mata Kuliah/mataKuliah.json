@@ -1,4 +1,8 @@
 {
     "thnkur" : "2020",
-    "prodi" : "Teknik Informatika"
+    "prodi" : "Teknik Informatika",
+    "periode" : "2023/2024 Gasal",
+    "kodecpmk" : "CPMK 01",
+    "cpmkIN" : "Kemampuan membangun sistem informasi dalam perusahaan, sistem informasi keuangan, sistem informasi manufaktur, implementasi CIM, sistem informasi pemasaran, sistem informasi sumber daya manusia",
+    "cpmkEN" : "Ability to build information systems within companies, financial information systems, manufacturing information systems, CIM implementation, marketing information systems, human resource information systems"
 }

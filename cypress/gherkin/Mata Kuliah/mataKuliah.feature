@@ -5,3 +5,4 @@ Feature: Test Case - Mata Kuliah
 
     Scenario: Admin mengelola mata kuliah OBE
         When Admin memilih mata kuliah "Pengantar Teknologi Informasi"
+        * Admin mengisi data "Pemetaan CPMK"
