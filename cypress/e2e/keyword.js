@@ -18,9 +18,6 @@ Given('User memilih modul akademik', ()=>{
     cy.get(".siakad > .inner").click();
     cy.get("#siakad").contains("Super Administrator").should('be.visible').click();
     cy.get('.container > .nav > :nth-child(1) > a').click()
-    // Cypress.on('uncaught:exception', (err, runnable) => {
-    //     return false
-    // })
 })
 
 When('User mengakses halaman mata kuliah', ()=>{
