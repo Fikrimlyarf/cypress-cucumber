@@ -1,11 +1,11 @@
 { "list": [
         {
-            "id":"1",
+            "id":"Super Administrator",
             "username": "fikri",
             "password": "j77/FQjF"
         },
         {
-            "id":"2",
+            "id":"Admin PT",
             "username": "adminpt",
             "password": "password"
         }

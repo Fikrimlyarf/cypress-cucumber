@@ -1,33 +1,6 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import dataMK from '../../fixtures/Mata Kuliah/mataKuliah.json'
 
-Given ('Admin mengakses halaman Mata Kuliah', ()=> {
-    cy.visit('/');
-    // cy.loginsuperadmin('1');
-    // cy.modulAkademik()
-
-    //login superadmin
-    cy.fixture("login/login_user").then((data) => {
-        data.list.forEach((user)=>{
-          if('1' === user.id){
-            cy.get("#email").type(user.username);
-            cy.get("#password").type(user.password);
-          }
-        })
-      });
-    cy.get(".btn-login").contains("Masuk").click();
-
-    //pilih modul akademik
-    cy.get(".siakad > .inner").click();
-    cy.get("#siakad").contains("Super Administrator").should('be.visible').click();
-    cy.get('.container > .nav > :nth-child(1) > a').click()
-    Cypress.on('uncaught:exception', (err, runnable) => {
-        return false
-    })
-
-    cy.visit('http://localhost/siacloud/siakad/list_matakuliah');
-})
-
 When('Admin memilih mata kuliah {string}', (mk)=>{
     if(mk == 'Pengantar Teknologi Informasi'){
         cy.get('#collapseTahunKurikulum').contains(dataMK.thnkur).click()
@@ -59,7 +32,7 @@ When('Admin mengisi data {string}', (menu)=>{
     cy.get('#form_data > div > table > tbody >tr').each(($el)=>{
       cy.log($el)
       cy.get($el).children().each(($elchild, index)=>{
-          if(index > 4 ){
+          if(index > 1 ){
               const temp = Math.random() < 0.6
               // cy.log(index)
               if(temp){
