@@ -27,7 +27,7 @@ When('User mengakses halaman mata kuliah', ()=>{
     cy.visit('http://localhost/siacloud/siakad/list_matakuliah');
 })
 
-When('Menampilkan modal konfirmasi', (pilih)=>{
+When('User klik tombol konfirmasi {string}', (pilih)=>{
     cy.get('#modal-konfirmasi').should('be.visible')
       if(pilih=="ya"){
         cy.get('[data-bb-handler="confirm"]').should('be.visible').and('contain', 'Ya, Yakin').click()
