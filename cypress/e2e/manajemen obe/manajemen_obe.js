@@ -1,6 +1,6 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import dataCPL from '../../fixtures/Manajemen OBE/manajemenCPL.json'
-import dataPL from '../../fixtures/Manajemen OBE/profilLulusan.json'
+import dataCPL from '../../fixtures/manajemen obe/manajemen_cpl.json'
+import dataPL from '../../fixtures/manajemen obe/profil_lulusan.json'
 
 Given ('Admin mengakses halaman menajemen OBE', ()=> {
     cy.visit('/');

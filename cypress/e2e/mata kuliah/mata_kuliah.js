@@ -1,17 +1,13 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import dataMK from '../../fixtures/Mata Kuliah/mataKuliah.json'
+import dataMK from '../../fixtures/mata kuliah/mata_kuliah.json'
 
 When('Admin memilih mata kuliah {string}', (mk)=>{
     if(mk == 'Pengantar Teknologi Informasi'){
         cy.get('#collapseTahunKurikulum').contains(dataMK.thnkur).click()
-        // cy.get('#accordion').contains('Prodi Pengampu').click()
-        // cy.get('#collapseunit').contains('a', /^S1 - Teknik Informatika$/).click()
-        
-
         cy.get('.col-xs-8 > .input-group > .form-control').type('Pengantar Teknologi Informasi')
         cy.get('.input-group-btn > .btn-success').click()
         cy.get('table.table.table-bordered.table-striped.dataTable > tbody > tr > td').each(($el) => {
-            if ($el.text() == '2020' && 'Teknik Informatika') {
+            if (($el.text() == '2020') && ($el.text() == 'Teknik Informatika')) {
               cy.get($el).parent().find('.btn.btn-info.btn-xs.btn-flat').last().click()
             }
           })
