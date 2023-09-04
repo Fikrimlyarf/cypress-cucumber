@@ -26,11 +26,11 @@ When('User mengakses halaman mata kuliah', ()=>{
 
 When('User klik tombol konfirmasi {string}', (pilih)=>{
     cy.get('#modal-konfirmasi').should('be.visible')
-      if(pilih=="ya"){
+      if(pilih === "Ya, Yakin"){
         cy.get('[data-bb-handler="confirm"]').should('be.visible').and('contain', 'Ya, Yakin').click()
-      }else if(pilih=="tidak"){
+      }else if(pilih === "Batalkan"){
         cy.get('[data-bb-handler="cancel"]').should('be.visible').and('contain', 'Batalkan').click()
-      }else if(pilih=="ok"){
+      }else if(pilih === "Ok"){
         cy.get('[data-bb-handler="ok"]').should('be.visible').and('contain', 'Ok').click()
       }
 })

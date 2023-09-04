@@ -13,9 +13,7 @@ When('Admin memilih mata kuliah {string}', (mk)=>{
         cy.get('table.table.table-bordered.table-striped.dataTable > tbody > tr > td').each(($el) => {
             if ($el.text() == '2020' && 'Teknik Informatika') {
               cy.get($el).parent().find('.btn.btn-info.btn-xs.btn-flat').last().click()
-            //   return false
             }
-            // cy.log($el.text())
           })
     }
 })
