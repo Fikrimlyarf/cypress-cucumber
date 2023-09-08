@@ -20,8 +20,18 @@ Given('User memilih modul akademik', ()=>{
     cy.get('.container > .nav > :nth-child(1) > a').click()
 })
 
-When('User mengakses halaman mata kuliah', ()=>{
-    cy.visit('http://localhost/siacloud/siakad/list_matakuliah');
+const url = {
+  // Akademik
+  "mata kuliah": "siakad/list_matakuliah",
+
+  // PMB
+  "jalur pendaftaran": "spmb/ms_jalurpendaftaran",
+  "periode pendaftaran": "spmb/list_periode"
+
+}
+When('User mengakses halaman {string}', (pageName)=>{
+  const pageUrl = url[pageName]
+  cy.visit(pageUrl)
 })
 
 When('User klik tombol konfirmasi {string}', (pilih)=>{
