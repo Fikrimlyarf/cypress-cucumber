@@ -20,8 +20,18 @@ Given('User memilih modul akademik', ()=>{
     cy.get('.container > .nav > :nth-child(1) > a').click()
 })
 
-When('User mengakses halaman mata kuliah', ()=>{
-    cy.visit('http://localhost/siacloud/siakad/list_matakuliah');
+const url = {
+  // Akademik
+  "mata kuliah": "siakad/list_matakuliah",
+
+  // PMB
+  "jalur pendaftaran": "spmb/ms_jalurpendaftaran",
+  "periode pendaftaran": "spmb/list_periode"
+
+}
+When('User mengakses halaman {string}', (pageName)=>{
+  const pageUrl = url[pageName]
+  cy.visit(pageUrl)
 })
 
 When('User klik tombol konfirmasi {string}', (pilih)=>{
@@ -33,4 +43,47 @@ When('User klik tombol konfirmasi {string}', (pilih)=>{
       }else if(pilih === "Ok"){
         cy.get('[data-bb-handler="ok"]').should('be.visible').and('contain', 'Ok').click()
       }
+})
+
+// Tambah modul lain dan kombinasi user disini
+const moduleActions = {
+  PMB: {
+    SuperAdmin: () => {
+      cy.get(".spmb").click()
+      cy.get('#spmb').contains("Super Administrator").should('be.visible', { timeout: 1000 }).click()
+    },
+    Admin: () => {
+      cy.get(".spmb").click()
+      cy.get('#spmb').contains('Administrator Perguruan Tinggi').should('be.visible', { timeout: 1000 }).click()
+    }
+  },
+  Siakad: {
+    SuperAdmin: () => {
+      cy.get(".siakad > .inner").click()
+      cy.get("#siakad").contains("Super Administrator").should('be.visible', { timeout: 1000 }).click()
+    },
+    Admin: () => {
+      cy.get(".siakad > .inner").click()
+      cy.get("#siakad").contains("Administrator Perguruan Tinggi").should('be.visible', { timeout: 1000 }).click()
+    },
+    Dosen: () => {
+      cy.get(".siakad > .inner").click()
+      cy.get("#siakad").contains("Dosen").should('be.visible', { timeout: 1000 }).click()
+    }
+  },
+  Aplikasi: {
+    SuperAdmin: () => {
+      cy.get(".admin > .inner").click()
+      cy.get("#admin").contains("Super Administrator").should('be.visible', { timeout: 1000 }).click()
+    }
+  }
+}
+// Pemanggilan untuk feature nya
+When('{string} masuk ke modul {string}', (user, modul) => {
+  const action = moduleActions[modul]?.[user]
+  if (action) {
+    action()
+  } else {
+    cy.log("Modul / Role tidak ditemukan")
+  }
 })
