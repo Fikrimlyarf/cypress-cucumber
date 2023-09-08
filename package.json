@@ -12,6 +12,7 @@
   "devDependencies": {
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
     "cypress": "^12.17.4",
+    "cypress-plugin-tab": "^1.0.5",
     "esbuild": "^0.18.12"
   },
   "dependencies": {

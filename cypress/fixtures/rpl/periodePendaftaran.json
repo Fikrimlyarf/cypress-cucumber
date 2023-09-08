@@ -1,0 +1,23 @@
+{
+    "dataPeriode": [
+        {
+            "nama": "Rekognisi Pembelajaran Lampau",
+            "periode": "2023/2024 Gasal",
+            "gelombang": "Gelombang 5",
+            "jalur": "Rekognisi Pembelajaran Lampau",
+            "sistemKuliah": "Reguler",
+            "tglMulai": "1-8-2023",
+            "tglAkhir": "2-5-2024",
+            "akhirFinalisasi": "2-5-2024",
+            "awalDU": "10-8-2023",
+            "akhirDU": "10-8-2024",
+            "kodePendaftar": "120112",
+            "umumkanNilai": "10-8-2024",
+            "umumkanLulus": "10-8-2024", 
+            "waktuUmumNilai": "1000",
+            "waktuUmumLulus": "1000"
+        }
+    ],
+    "alertDuplikat": "Penambahan data Periode Pendaftaran gagal, ada duplikasi data",
+    "alertBerhasil": "Penambahan data Periode Pendaftaran berhasil"
+}
