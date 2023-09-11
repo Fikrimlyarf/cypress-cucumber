@@ -29,7 +29,7 @@ When('{string} memilih modul {string}', (user, modul)=>{
 })
 })
 
-//parameter halaman
+//list parameter halaman
 const url = {
   // Akademik
   "mata kuliah": "siakad/list_matakuliah",
