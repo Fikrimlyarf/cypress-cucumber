@@ -1,0 +1,62 @@
+{
+    "prodi": [
+        {
+            "prodi": "S1 - Akuntansi",
+            "adminProdi": "0428047904 - IRWAN  HERMAWAN, SE., ME",
+            "kuota": "10",
+            "prefixNim": "A12.2023",
+            "urutNim": "3"
+        },
+        {
+            "prodi": "S1 - Hukum",
+            "adminProdi": "",
+            "kuota": "5",
+            "prefixNim": "H10.2023",
+            "urutNim": "3"
+        },
+        {
+            "prodi": "S1 - Teknik Informatika",
+            "adminProdi": "",
+            "kuota": "10",
+            "prefixNim": "T11.2023",
+            "urutNim": "3"
+        }
+    ],
+    "asesor": [
+        {
+            "search": "JUNAEDI",
+            "suggest": "8854101019 - JUNAEDI  SISWANTO, S.IP, M.Ak",
+            "prodiAsal": "S1 - Akuntansi"
+        },
+        {
+            "search": "NUR ALIM",
+            "suggest": "0412089502 - NUR ALIM BAHRI, S.Ak., M.Ak",
+            "prodiAsal": "S1 - Akuntansi"
+        },
+        {
+            "search": "MEUTIA",
+            "suggest": "0425119401 - MEUTIA RIANY, S.E., M,Ak",
+            "prodiAsal": "S1 - Akuntansi"
+        },
+        {
+            "search": "FERDY",
+            "suggest": "0411068302 - FERDY  FERDIAN, SH., MH.",
+            "prodiAsal": "S1 - Hukum"
+        },
+        {
+            "search": "JUNAIDI",
+            "suggest": "0403126302 - JUNAIDI, SH, MM",
+            "prodiAsal": "S1 - Hukum"
+        },
+        {
+            "search": "Dedi",
+            "suggest": "0401037203 - Dedi Supardi, S.T, M.Kom",
+            "prodiAsal": "S1 - Teknik Informatika"
+        },
+        {
+            "search": "UMAR",
+            "suggest": "0424068107 - UMAR  ADITIAWARMAN, S.T, M.Sc., Ph.D",
+            "prodiAsal": "S1 - Teknik Informatika"
+        }
+    ]
+}
