@@ -87,3 +87,20 @@ When('{string} masuk ke modul {string}', (user, modul) => {
     cy.log("Modul / Role tidak ditemukan")
   }
 })
+
+When('{string} memilih modul {string}', (user, modul)=>{
+  cy.fixture('login/login_user').then((data) => {
+    data.list.forEach((aktor)=>{
+      if(user === aktor.id){
+        if(modul === "akademik"){
+          cy.get(".siakad > .inner").click();
+          cy.get("#siakad").contains("Super Administrator").should('be.visible').click();
+          cy.get('.container > .nav > :nth-child(1) > a').click()
+        } else if (modul === "pmb"){
+          cy.get(".spmb").click()
+          cy.get('#spmb').contains("Super Administrator").should('be.visible', { timeout: 1000 }).click()
+        }
+      }
+    })
+  })
+})
