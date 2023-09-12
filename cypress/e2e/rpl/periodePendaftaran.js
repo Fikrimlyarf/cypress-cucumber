@@ -39,51 +39,46 @@ When("User menambahkan prodi dengan {string} asesor", (jumlahAsesor) => {
     cy.get('#sidebar-menu-list > :nth-child(3) > a').contains('Program Studi').click()
   
     dataProdi.prodi.forEach((prodi) => {
-      cy.get('.btn-success').contains('Tambah').click()
-  
-      // Mengisi Form prodi dengan jalur RPL transfer kredit
-      cy.get('#select2-idunit-container').type(prodi.prodi + '{enter}')
-      cy.get('#idadminprodi')
-      cy.get('#jmlditerima').type(prodi.kuota)
-      cy.get('#prefixnim').type(prodi.prefixNim)
-      cy.get('#select2-jmlurutannim-container').type(prodi.urutNim + '{enter}')
-      cy.get(':nth-child(3) > .icheckbox_minimal > .iCheck-helper').click()
-  
-      // Memilih Asesor
-      cy.get('#item-assesor-rpl > a').click()
-      const total = parseInt(jumlahAsesor)
-  
-      // Cek apakah jumlah asesor >1, jika iya maka klik tombol tambah asesor
-      if (total > 1) {
-        const klik = total - 1; // Hitung berapa kali tombol tambah asesor harus diklik
-        for (let i = 0; i < klik; i++) {
-          cy.get('#tr_tambahasesor > :nth-child(1) > .row > .col-md-8 > .btn').click()
+        cy.get('.btn-success').contains('Tambah').click()
+    
+        // Mengisi Form prodi dengan jalur RPL transfer kredit
+        cy.get('#select2-idunit-container').type(prodi.prodi + '{enter}')
+        cy.get('#idadminprodi')
+        cy.get('#jmlditerima').type(prodi.kuota)
+        cy.get('#prefixnim').type(prodi.prefixNim)
+        cy.get('#select2-jmlurutannim-container').type(prodi.urutNim + '{enter}')
+        cy.get(':nth-child(3) > .icheckbox_minimal > .iCheck-helper').click()
+    
+        // Memilih Asesor
+        cy.get('#item-assesor-rpl > a').click()
+        const total = parseInt(jumlahAsesor)
+    
+        // Cek apakah jumlah asesor >1, jika iya maka klik tombol tambah asesor
+        if (total > 1) {
+            const klik = total - 1; // Hitung berapa kali tombol tambah asesor harus diklik
+            for (let i = 0; i < klik; i++) {
+            cy.get('#tr_tambahasesor > :nth-child(1) > .row > .col-md-8 > .btn').click()
+            }
         }
-      }
-  
-      dataProdi.asesor.forEach((asesor, index) => {
-        if (index < total && asesor.prodiAsal === prodi.prodi) {
-            cy.log(`Prodi Asesor: ${asesor.prodiAsal} ${prodi.prodi}`)
-          const asesorData = asesor
-          if (asesorData) {
-            const searchValue = asesorData.search
-            const suggestValue = asesorData.suggest
-  
-            cy.get(`#select2-asesor_${index}-container`).type(searchValue)
+
+        let prodiSebelumnya = null; // Inisialisasi prodiSebelumnya dengan null
+        let realIndex = 0; // Inisialisasi realIndex kembali ke 0 untuk setiap prodi
+        dataProdi.asesor.forEach((asesor) => {
+            if (asesor.prodiAsal === prodi.prodi) {
+            cy.get(`#select2-asesor_${realIndex}-container`).type(asesor.search)
             cy.get('.select2-results').each(($el) => {
-              if ($el.text() === suggestValue) {
+                if ($el.text() === asesor.suggest) {
                 cy.wrap($el).click()
-  
-                // Tambahkan log untuk mencatat bahwa asesor telah dipilih
-                cy.log(`Asesor untuk prodi '${prodi.prodi}' telah dipilih: ${searchValue}`)
-              }
+                }
             })
-          }
-        } else {
-          console.error(`Asesor tidak tersedia pada data fixture`)
-        }
-      })
-      cy.get('.btn-success').contains('Simpan').click()
-      cy.get('#modal-konfirmasi > .modal-footer > .btn-primary').click()
+            // Tambahkan log untuk mencatat bahwa asesor telah dipilih
+            cy.log(`Asesor untuk prodi '${prodi.prodi}' telah dipilih: ${asesor.search}`)
+            realIndex++; // Naikkan realIndex setiap kali Anda mengisi asesor yang sesuai dengan prodi
+            }
+        })
+  
+        cy.get('.btn-success').contains('Simpan').click()
+        cy.get('#modal-konfirmasi > .modal-footer > .btn-primary').click()
+        prodiSebelumnya = prodi.prodi;
     })
   })  
