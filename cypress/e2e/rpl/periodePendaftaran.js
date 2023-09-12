@@ -1,4 +1,4 @@
-import { When } from "@badeball/cypress-cucumber-preprocessor";
+import { When } from "@badeball/cypress-cucumber-preprocessor"
 import dataPeriod from "../../fixtures/rpl/periodePendaftaran.json"
 import dataProdi from "../../fixtures/rpl/prodi.json"
 
@@ -33,8 +33,9 @@ When ("User menambahkan {string} dengan jalur RPL", (menu) => {
 })
 
 When("User menambahkan prodi dengan {string} asesor", (jumlahAsesor) => {
-    cy.get("input.form-control.input-sm").type('Rekognisi Pembelajaran Lampau{enter}')
-    cy.get('.table').contains('Gelombang 5').parent().find('.btn-info').click()
+    // // Masuk ke detail data
+    // cy.get("input.form-control.input-sm").type('Rekognisi Pembelajaran Lampau{enter}')
+    // cy.get('.table').contains('Gelombang 5').parent().find('.btn-info').click()
   
     cy.get('#sidebar-menu-list > :nth-child(3) > a').contains('Program Studi').click()
   
@@ -55,7 +56,7 @@ When("User menambahkan prodi dengan {string} asesor", (jumlahAsesor) => {
     
         // Cek apakah jumlah asesor >1, jika iya maka klik tombol tambah asesor
         if (total > 1) {
-            const klik = total - 1; // Hitung berapa kali tombol tambah asesor harus diklik
+            const klik = total - 1 // Hitung berapa kali tombol tambah asesor harus diklik
             for (let i = 0; i < klik; i++) {
             cy.get('#tr_tambahasesor > :nth-child(1) > .row > .col-md-8 > .btn').click()
             }
@@ -82,3 +83,35 @@ When("User menambahkan prodi dengan {string} asesor", (jumlahAsesor) => {
         prodiSebelumnya = prodi.prodi;
     })
   })  
+
+When("User menambahkan mata kuliah di prodi {string}", (prodiName) => {
+    // Masuk ke detail data
+    cy.get("input.form-control.input-sm").type('Rekognisi Pembelajaran Lampau{enter}')
+    cy.get('.table').contains('Gelombang 5').parent().find('.btn-info').click()
+  
+    cy.get('#sidebar-menu-list > :nth-child(4) > a').contains('Mata Kuliah RPL').click()
+    if (prodiName == "akuntansi") {
+        cy.get('#idsebaranprodi').select('S1 - Akuntansi')
+    } else if (prodiName == 'hukum') {
+        cy.get('#idsebaranprodi').select('S1 - Hukum')
+    } else if (prodiName == 'teknik informatika') {
+        cy.get('#idsebaranprodi').select('S1 - Informatika')
+    }
+
+    cy.get('.col-md-8 > .btn-success').click()
+        // cy.get('#search_matakuliah').type('AK1102')
+        cy.get('#modal_kurikulum > .modal-dialog > .modal-content').then(($el) => {
+            cy.get($el).children().find('.icheckbox_minimal').each(($elchild, index)=>{
+                if(index > 1 ){
+                    const temp = Math.random() < 0.5
+                    // cy.log('index : ' + index)
+                    if(temp && index < 8){ // dibatasi sebanyak 8 centangan
+                        // cy.log('temp : ' + temp)
+                        cy.get($elchild).invoke('addClass', 'checked');
+                        cy.get($elchild).invoke('attr', 'aria-checked', true).click();
+                    }
+                }
+            })
+        })
+    cy.get('#select_mk').click()
+})
