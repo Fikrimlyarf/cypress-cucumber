@@ -1,5 +1,8 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import dataMK from '../../fixtures/mata kuliah/mata_kuliah.json'
+import rps from '../../fixtures/mata kuliah/detail_rps.json'
+
+const fileupload = 'file upload/lorem-ipsum.pdf'
 
 When('Admin memilih mata kuliah {string}', (mk)=>{
     if(mk == 'Pengantar Teknologi Informasi'){
@@ -25,7 +28,7 @@ When('Admin mengisi data {string}', (menu)=>{
       cy.get('#i_deskripsi_en').type(cpmk.cpmkEN)
       cy.get('#form_data > div > table > tbody').each(($el, index)=>{
         cy.get($el).children().each(($elchild, index)=>{
-            if(index > 1 ){
+            if(index > 0 ){
                 const temp = Math.random() > 0.66
                 cy.log(Math.random())
                 if(temp){
@@ -37,5 +40,35 @@ When('Admin mengisi data {string}', (menu)=>{
       });
       cy.get('.btn-success').click()      
     })
+  } else if(menu == 'Detail RPS'){
+      cy.get('.list-unstyled.profile-nav').contains('Detail RPS').click();
+      cy.get('.btn.btn-warning.btn-sm').contains('Ubah RPS').click()
+      cy.get('#tglcp').type('12-12-2022').tab()
+      const deskripsimk = cy.get('#block-deskripsimk > .col-md-9 > .wysihtml5-sandbox').its('0.contentDocument.body').should('be.visible').then(cy.wrap)
+      const deskripsimken = cy.get('#block-deskripsimken > .col-md-9 > .wysihtml5-sandbox').its('0.contentDocument.body').should('be.visible').then(cy.wrap)
+      const tujuanmk  = cy.get('#block-tujuanmk > .col-md-9 > .wysihtml5-sandbox').its('0.contentDocument.body').should('be.visible').then(cy.wrap)
+      const filebahanajar = cy.get('#block-filebahanajar > .col-md-9 > .wysihtml5-sandbox').its('0.contentDocument.body').should('be.visible').then(cy.wrap)
+      const pustaka = cy.get('#block-pustaka > .col-md-9 > .wysihtml5-sandbox').its('0.contentDocument.body').should('be.visible').then(cy.wrap)
+      const pustakapendukung = cy.get('#block-pustakapendukung > .col-md-9 > .wysihtml5-sandbox').its('0.contentDocument.body').should('be.visible').then(cy.wrap)
+      const mediabelajarlunak = cy.get('#block-mediabelajarlunak > .col-md-9 > .wysihtml5-sandbox').its('0.contentDocument.body').should('be.visible').then(cy.wrap)
+      const mediabelajarkeras = cy.get('#block-mediabelajarkeras > .col-md-9 > .wysihtml5-sandbox').its('0.contentDocument.body').should('be.visible').then(cy.wrap)
+      
+      deskripsimk.focus().realType(rps.deskripsimk)
+      deskripsimken.focus().realType(rps.deskripsimken)
+      tujuanmk.focus().realType(rps.tujuanmk)
+      filebahanajar.focus().realType(rps.filebahanajar)
+      pustaka.focus().realType(rps.pustaka)
+      pustakapendukung.focus().realType(rps.pustakapendukung)
+      mediabelajarlunak.focus().realType(rps.mediabelajarlunak)
+      mediabelajarkeras.focus().realType(rps.mediabelajarkeras)
+
+      cy.get('#block-filerps > .col-md-9 > input').attachFile(fileupload)
+      cy.get('[data-type="save"]').click()
+  } else if (menu == 'Renc. Pembelajaran'){
+      cy.get('.list-unstyled.profile-nav').contains('Renc. Pembelajaran').click();
+      cy.get('#select2-perioderps-container').click()
+      cy.get('.select2-search__field').type(dataMK.periode)
+      cy.get('#select2-perioderps-results').contains(dataMK.periode).click();
+      cy.get('.btn.btn-success.btn-sm').click()
   }
 })

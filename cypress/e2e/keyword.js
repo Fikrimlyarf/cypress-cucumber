@@ -32,7 +32,7 @@ When('{string} memilih modul {string}', (user, modul)=>{
 //list parameter halaman
 const url = {
   // Akademik
-  "mata kuliah": "siakad/list_matakuliah",
+  "mata kuliah": "http://localhost/siacloud/siakad/list_matakuliah",
 
   // PMB
   "jalur pendaftaran": "spmb/ms_jalurpendaftaran",
