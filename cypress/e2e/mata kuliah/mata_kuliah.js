@@ -3,6 +3,7 @@ import dataMK from '../../fixtures/mata kuliah/mata_kuliah.json'
 import rps from '../../fixtures/mata kuliah/detail_rps.json'
 
 const fileupload = 'file upload/lorem-ipsum.pdf'
+const excelrps = 'file upload/Template Rincian RPS.xlsx'
 
 When('Admin memilih mata kuliah {string}', (mk)=>{
     if(mk == 'Pengantar Teknologi Informasi'){
@@ -69,6 +70,9 @@ When('Admin mengisi data {string}', (menu)=>{
       cy.get('#select2-perioderps-container').click()
       cy.get('.select2-search__field').type(dataMK.periode)
       cy.get('#select2-perioderps-results').contains(dataMK.periode).click();
-      cy.get('.btn.btn-success.btn-sm').click()
+      cy.get('.btn.btn-warning.btn-sm').contains('Upload Excel').click()
+      cy.get('#modal_rps').should('contain', 'Upload Excel Rincian RPS')
+      cy.get('[name="excel"]').attachFile(excelrps);
+      cy.get('.btn.btn-success').contains('Upload Excel').click()
   }
 })
