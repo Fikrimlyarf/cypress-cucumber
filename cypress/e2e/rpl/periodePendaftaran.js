@@ -48,8 +48,42 @@ When("User menambahkan prodi dengan {string} asesor", (jumlahAsesor) => {
         cy.get('#jmlditerima').type(prodi.kuota)
         cy.get('#prefixnim').type(prodi.prefixNim)
         cy.get('#select2-jmlurutannim-container').type(prodi.urutNim + '{enter}')
-        cy.get(':nth-child(3) > .icheckbox_minimal > .iCheck-helper').click()
-    
+
+        // Jika transfer kredit diperlukan
+        if (prodi.tfKredit == "ya") {
+            cy.get('#dokumen-rpl > :nth-child(2) > .labelinput > .icheckbox_minimal > .iCheck-helper').click();
+
+            // Mewajibkan dokumen transfer kredit
+            cy.get(':nth-child(2) > .table').contains('Ijazah').parent().find('.labelinput > .icheckbox_minimal > .iCheck-helper').click();
+            cy.get(':nth-child(2) > .table').contains('Transkrip').parent().find('.labelinput > .icheckbox_minimal > .iCheck-helper').click();
+
+            // Jika perolehan kredit juga diperlukan
+            if (prodi.perolehanKredit == "ya") {
+                cy.get('#dokumen-rpl > :nth-child(3) > .labelinput > .icheckbox_minimal > .iCheck-helper').click();
+
+                // Menambah dokumen perolehan kredit
+                cy.get('#dokumen_a2_0').select('Penghargaan');
+                cy.get('[style=""] > :nth-child(3) > .labelinput > .icheckbox_minimal > .iCheck-helper').click();
+                cy.get('.col-md-3 > .btn').click();
+
+                cy.get('#dokumen_a2_1').select('Surat Referensi');
+                cy.get(':nth-child(2) > :nth-child(3) > .labelinput > .icheckbox_minimal > .iCheck-helper').click();
+            }
+        } else {
+            // Jika transfer kredit tidak diperlukan, tetapi perolehan kredit diperlukan
+            if (prodi.perolehanKredit == "ya") {
+                cy.get('#dokumen-rpl > :nth-child(3) > .labelinput > .icheckbox_minimal > .iCheck-helper').click();
+
+                // Menambah dokumen perolehan kredit
+                cy.get('#dokumen_a2_0').select('Penghargaan');
+                cy.get('[style=""] > :nth-child(3) > .labelinput > .icheckbox_minimal > .iCheck-helper').click();
+                cy.get('.col-md-3 > .btn').click();
+
+                cy.get('#dokumen_a2_1').select('Sertifikat');
+                cy.get(':nth-child(2) > :nth-child(3) > .labelinput > .icheckbox_minimal > .iCheck-helper').click();
+            }
+        }
+
         // Memilih Asesor
         cy.get('#item-assesor-rpl > a').click()
         const total = parseInt(jumlahAsesor)
@@ -85,9 +119,9 @@ When("User menambahkan prodi dengan {string} asesor", (jumlahAsesor) => {
   })  
 
 When("User menambahkan mata kuliah di prodi {string}", (prodiName) => {
-    // Masuk ke detail data
-    cy.get("input.form-control.input-sm").type('Rekognisi Pembelajaran Lampau{enter}')
-    cy.get('.table').contains('Gelombang 5').parent().find('.btn-info').click()
+    // // Masuk ke detail data
+    // cy.get("input.form-control.input-sm").type('Rekognisi Pembelajaran Lampau{enter}')
+    // cy.get('.table').contains('Gelombang 5').parent().find('.btn-info').click()
   
     cy.get('#sidebar-menu-list > :nth-child(4) > a').contains('Mata Kuliah RPL').click()
     if (prodiName == "akuntansi") {

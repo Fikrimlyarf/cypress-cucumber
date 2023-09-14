@@ -5,21 +5,27 @@
             "adminProdi": "0428047904 - IRWAN  HERMAWAN, SE., ME",
             "kuota": "10",
             "prefixNim": "A12.2023",
-            "urutNim": "3"
+            "urutNim": "3",
+            "tfKredit": "tidak",
+            "perolehanKredit": "ya"
         },
         {
             "prodi": "S1 - Hukum",
             "adminProdi": "",
             "kuota": "5",
             "prefixNim": "H10.2023",
-            "urutNim": "3"
+            "urutNim": "3",
+            "tfKredit": "ya",
+            "perolehanKredit": "ya"
         },
         {
             "prodi": "S1 - Teknik Informatika",
             "adminProdi": "",
             "kuota": "10",
             "prefixNim": "T11.2023",
-            "urutNim": "3"
+            "urutNim": "3",
+            "tfKredit": "ya",
+            "perolehanKredit": "tidak"
         }
     ],
     "asesor": [
