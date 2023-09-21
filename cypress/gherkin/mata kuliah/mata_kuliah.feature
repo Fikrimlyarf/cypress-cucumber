@@ -11,8 +11,10 @@ Feature: Test Case - Mata Kuliah
         # * Admin mengisi data "Detail RPS"
         # * User klik tombol konfirmasi "Ya, Yakin"
         # * Admin mengisi data "Renc. Pembelajaran"
-        * Admin mengisi data "Metode Evaluasi"
-        * User klik tombol konfirmasi "Ya, Yakin"
+        # * Admin mengisi data "Metode Evaluasi"
+        # * User klik tombol konfirmasi "Ya, Yakin"
         * Admin mengisi data "Komposisi Nilai"
+
+    Scenario: Admin menghapus
 
     

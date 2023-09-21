@@ -93,6 +93,20 @@ When('Admin mengisi data {string}', (menu)=>{
 
   } else if (menu == 'Komposisi Nilai'){
     cy.get('.list-unstyled.profile-nav').contains('Rencana Evaluasi').click();
-    cy.get('[data-type="tambahkomposisi"]').click()
+    cy.get('#periode').select(dataMK.periode)
+    eval.nilai.forEach((komposisi)=>{
+      cy.get('[data-type="tambahkomposisi"]').click()
+      cy.get('#select2-i_unsurnilai-container').click()
+      cy.get('.select2-search__field').type(komposisi.unsur)
+      cy.get('#select2-i_unsurnilai-results').contains(komposisi.unsur).click()
+      cy.get('#select2-i_metodeevaluasi-container').click()
+      cy.get('.select2-search__field').type(komposisi.eval)
+      cy.get('#select2-i_metodeevaluasi-results').contains(komposisi.eval).click()
+      cy.get('#i_cpmk_71').clear().type(komposisi.cpmk1)
+      cy.get('#i_cpmk_72').clear().type(komposisi.cpmk2)
+        .parent().parent().find('[data-type="insertip"]').should('be.visible').click()
+      cy.get('.alert-success').should('contain', eval.alertevalberhasil)
+    })
+    cy.get('#total > strong').should('have.text', '100,00%')
   }
 })
