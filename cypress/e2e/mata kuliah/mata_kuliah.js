@@ -1,6 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import dataMK from '../../fixtures/mata kuliah/mata_kuliah.json'
 import rps from '../../fixtures/mata kuliah/detail_rps.json'
+import eval from '../../fixtures/mata kuliah/rencana_evaluasi.json'
 
 const fileupload = 'file upload/lorem-ipsum.pdf'
 const excelrps = 'file upload/Template Rincian RPS.xlsx'
@@ -41,6 +42,7 @@ When('Admin mengisi data {string}', (menu)=>{
       });
       cy.get('.btn-success').click()      
     })
+
   } else if(menu == 'Detail RPS'){
       cy.get('.list-unstyled.profile-nav').contains('Detail RPS').click();
       cy.get('.btn.btn-warning.btn-sm').contains('Ubah RPS').click()
@@ -65,6 +67,7 @@ When('Admin mengisi data {string}', (menu)=>{
 
       cy.get('#block-filerps > .col-md-9 > input').attachFile(fileupload)
       cy.get('[data-type="save"]').click()
+
   } else if (menu == 'Renc. Pembelajaran'){
       cy.get('.list-unstyled.profile-nav').contains('Renc. Pembelajaran').click();
       cy.get('#select2-perioderps-container').click()
@@ -74,5 +77,22 @@ When('Admin mengisi data {string}', (menu)=>{
       cy.get('#modal_rps').should('contain', 'Upload Excel Rincian RPS')
       cy.get('[name="excel"]').attachFile(excelrps);
       cy.get('.btn.btn-success').contains('Upload Excel').click()
+      cy.get('.alert').should('contain' ,rps.alertrpsberhasil)
+
+  } else if (menu == 'Metode Evaluasi'){
+    cy.get('.list-unstyled.profile-nav').contains('Rencana Evaluasi').click();
+    cy.get('#periode').select(dataMK.periode)
+    cy.get('[data-type="edit"]').click();
+    cy.get('#aktivitas_deskripsi').clear().type(eval.metodeaktivitas)
+    cy.get('#proyek_deskripsi').clear().type(eval.metodeproyek)
+    cy.get('#tugas_deskripsi').clear().type(eval.metodetugas)
+    cy.get('#quiz_deskripsi').clear().type(eval.metodequiz)
+    cy.get('#uts_deskripsi').clear().type(eval.metodeuts)
+    cy.get('#uas_deskripsi').clear().type(eval.metodeuas)
+    cy.get('[data-type="save"]').click();
+
+  } else if (menu == 'Komposisi Nilai'){
+    cy.get('.list-unstyled.profile-nav').contains('Rencana Evaluasi').click();
+    cy.get('[data-type="tambahkomposisi"]').click()
   }
 })
