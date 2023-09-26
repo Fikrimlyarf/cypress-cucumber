@@ -110,3 +110,40 @@ When('Admin mengisi data {string}', (menu)=>{
     cy.get('#total > strong').should('have.text', '100,00%')
   }
 })
+
+When('Admin menghapus {string}', (menu)=>{
+  if(menu == 'Komposisi Nilai'){
+    cy.get('.list-unstyled.profile-nav').contains('Rencana Evaluasi').click();
+    cy.get('#periode').select(dataMK.periode)
+    cy.get('.table.table-bordered.table-striped.dataTable > tfoot').find('td').then((row)=>{
+      for(let n = 1; n <= row.length; n++){
+          cy.get('td').parent()
+            .find('.btn.btn-danger.btn-xs.btn-flat').first().click()
+          cy.get('[data-bb-handler="confirm"]').should('be.visible').and('contain', 'Ya, Yakin').click()
+      }
+    })
+  }else if(menu == 'Renc. Pembelajaran'){
+    cy.get('.list-unstyled.profile-nav').contains('Renc. Pembelajaran').click();
+    cy.get('#select2-perioderps-container').click()
+    cy.get('.select2-search__field').type(dataMK.periode)
+    cy.get('#select2-perioderps-results').contains(dataMK.periode).click();
+    cy.get('.table.table-bordered.table-striped.dataTable > tbody').find('tr').then((row)=>{
+      for(let n = 1; n <= row.length; n++){
+          cy.get('td').parent()
+            .find('.btn.btn-danger.btn-xs.btn-flat').first().click()
+          cy.get('[data-bb-handler="confirm"]').should('be.visible').and('contain', 'Ya, Yakin').click()
+      }
+    })
+  }else if(menu == 'Pemetaan CPMK'){
+    cy.get('.list-unstyled.profile-nav').contains('Pemetaan CPMK').click();
+    cy.get('#periode').select(dataMK.periode)
+    cy.get('.table.table-bordered.table-striped.dataTable > tbody').find('tr').then((row)=>{
+      for(let n = 1; n <= row.length; n++){
+          cy.get('td').parent()
+            .find('.btn.btn-danger.btn-xs.btn-flat').first().click()
+          cy.get('[data-bb-handler="confirm"]').should('be.visible').and('contain', 'Ya, Yakin').click()
+      }
+    })
+  }
+})
+  
