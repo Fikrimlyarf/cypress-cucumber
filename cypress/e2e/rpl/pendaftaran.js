@@ -119,7 +119,7 @@ When ("Pendaftar mengupload berkas syarat pendaftaran", () => {
 
     cy.get('input[name^="filesyarat["]').each(($element) => {
         // Mengambil nilai atribut 'name' dari elemen
-        const nameAttribute = $element.attr('name');
+        const nameAttribute = $element.attr('name')
         cy.get(`input[name="${nameAttribute}"]`).should('exist').attachFile(ijazah)
     })
 
@@ -127,17 +127,24 @@ When ("Pendaftar mengupload berkas syarat pendaftaran", () => {
     cy.get('.btn-primary').click()
 })
 
-// When ("Pendaftar mengupload berkas syarat RPL", () => {
-//     cy.get(':nth-child(3) > a > [style="width:100%;"]').click()
-//     cy.get('.table > tbody')
-//     // cy.get('input[name="fotopendaftar"]').attachFile(foto)
+When ("Pendaftar mengupload berkas syarat RPL perolehan kredit", () => {
+    // cy.get('#menu-sidebar > :nth-child(3) > a').click()
 
-//     // cy.get('input[name^="filesyarat["]').each(($element) => {
-//     //     // Mengambil nilai atribut 'name' dari elemen
-//     //     const nameAttribute = $element.attr('name');
-//     //     cy.get(`input[name="${nameAttribute}"]`).should('exist').attachFile(ijazah)
-//     // })
+    cy.get('.table-wrapper').find('tr').each(($row, index, $list) => {
+            // Melewatkan baris header
+            if (index === 0) {
+                return
+            }
+            // Melakukan aksi untuk setiap baris data di sini
+            cy.wrap($row).find('td:contains("1")').should('exist')
+            .next().next().click().wait(1000)
+            
+            // Lakukan pengunggahan berkas
+            cy.get('input[id="input-doc-file"]').attachFile(ijazah)
+            
+            // Klik Upload
+            cy.get('.modal-footer > .button_primary').click()
+        })
 
-//     // cy.get('.btn').contains('SIMPAN').click()
-//     // cy.get('.btn-primary').click()
-// })
+    // cy.get('.modal-footer > .button_primary').click()
+})

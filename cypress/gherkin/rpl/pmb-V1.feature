@@ -11,4 +11,4 @@ Feature: Mendatar melalui jalur pendaftaran RPL
         * Pendaftar login menggunakan credentials yang didapat
         * Pendaftar melengkapi data untuk melanjutkan pendaftaran
         * Pendaftar mengupload berkas syarat pendaftaran
-        # * Pendaftar mengupload berkas syarat RPL
+        * Pendaftar mengupload berkas syarat RPL perolehan kredit
