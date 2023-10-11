@@ -1,0 +1,36 @@
+{
+    "metodeaktivitas" : "Aktivitas Partisipasi",
+    "metodeproyek" : "Hasil Proyek",
+    "metodetugas" : "Tugas",
+    "metodequiz" : "Quiz",
+    "metodeuts" : "UTS",
+    "metodeuas" : "UAS",
+    "alertevalberhasil" : "Rencana Evaluasi berhasil disimpan",
+    "nilai" : [
+        {
+            "unsur" : "TUGAS INDIVIDU",
+            "eval" : "Tugas",
+            "cpmk1" : "10",
+            "cpmk2" : "15"
+        },
+        {
+            "unsur" : "QUIZ",
+            "eval" : "Quiz",
+            "cpmk1" : "5",
+            "cpmk2" : "10"
+        },
+        {
+            "unsur" : "UTS",
+            "eval" : "Ujian Tengah Semester",
+            "cpmk1" : "20",
+            "cpmk2" : "0"
+        },
+        {
+            "unsur" : "UAS",
+            "eval" : "Ujian Akhir Semester",
+            "cpmk1" : "0",
+            "cpmk2" : "40"
+        }
+    ]
+    
+}

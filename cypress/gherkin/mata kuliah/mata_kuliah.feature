@@ -7,9 +7,19 @@ Feature: Test Case - Mata Kuliah
     Scenario: Admin mengelola mata kuliah OBE
         When User mengakses halaman "mata kuliah"
         * Admin memilih mata kuliah "Pengantar Teknologi Informasi"
-        # * Admin mengisi data "Pemetaan CPMK"
-        # * Admin mengisi data "Detail RPS"
-        # * User klik tombol konfirmasi "Ya, Yakin"
+        * Admin mengisi data "Pemetaan CPMK"
+        * Admin mengisi data "Detail RPS"
+        * User klik tombol konfirmasi "Ya, Yakin"
         * Admin mengisi data "Renc. Pembelajaran"
+        * Admin mengisi data "Metode Evaluasi"
+        * User klik tombol konfirmasi "Ya, Yakin"
+        * Admin mengisi data "Komposisi Nilai"
+
+    Scenario: Admin menghapus data OBE mata kuliah
+        When User mengakses halaman "mata kuliah"
+        * Admin memilih mata kuliah "Pengantar Teknologi Informasi"
+        * Admin menghapus "Komposisi Nilai"
+        * Admin menghapus "Renc. Pembelajaran"
+        * Admin menghapus "Pemetaan CPMK"
 
     
