@@ -1,0 +1,31 @@
+{
+    "pendaftar": [
+        {
+            "nama": "Al - Kahfi",
+            "kelamin": "L",
+            "hp": "089765214212311",
+            "email": "kahfi@yopmail.com",
+            "tglLahir": "01-04-2004",
+            "tempatLahir": "Gresik",
+            "nik": "3365412898128764",
+            "pendidikanTerakhir": "SMA/SMK Sederajat",
+            "provinsi": "Jawa Timur",
+            "kab/kota": "Kabupaten Gresik",
+            "jnsSekolah": "SMAN",
+            "namaSekolah": "SMAN 1 MANYAR",
+            "autoCompleteNamaSekolah": "20500477 - SMAN 1 MANYAR - KABUPATEN GRESIK",
+            "jurusan": "IPA",
+            "thLulus": "2021",
+            "prodiPilihan": "Teknik Informatika",
+            "agama": "islam",
+            "pekerjaan": "tidak bekerja",
+            "namaIbu": "Tere",
+            "pekerjaanIbu": "Tidak Bekerja",
+            "penghasilanIbu": "1juta-2juta",
+            "namaAyah": "Tarno",
+            "pekerjaanAyah": "Tidak Bekerja",
+            "penghasilanAyah": "1juta-2juta",
+            "nisn": "8765210987"
+        }
+    ]
+}

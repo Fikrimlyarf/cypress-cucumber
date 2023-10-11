@@ -36,7 +36,8 @@ const url = {
 
   // PMB
   "jalur pendaftaran": "spmb/ms_jalurpendaftaran",
-  "periode pendaftaran": "spmb/list_periode"
+  "periode pendaftaran": "spmb/list_periode",
+  "jalur seleksi" : "spmbfront/jalur-seleksi"
 
 }
 When('User mengakses halaman {string}', (pageName)=>{
