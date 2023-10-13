@@ -26,7 +26,7 @@ When ("User menambahkan {string} dengan jalur RPL", (menu) => {
             cy.get('#waktuumumkankelulusan').type(periode.waktuUmumLulus)
             cy.get('.btn-success').click()
             cy.get('#modal-konfirmasi > .modal-footer > .btn-primary').click()
-            cy.get('.alert').should('contain', data.alertBerhasil)
+            cy.get('.alert').should('contain', dataPeriod.alertBerhasil)
 
         })
     }

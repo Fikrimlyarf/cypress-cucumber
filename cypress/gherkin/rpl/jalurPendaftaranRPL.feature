@@ -2,7 +2,7 @@ Feature: Membuat jalur pendaftaran RPL
 
     Background:
         Given User login sebagai "Super Administrator"
-        * "SuperAdmin" masuk ke modul "PMB"
+        * "Super Administrator" memilih modul "pmb"
 
     Scenario: Menambahkan jalur pendaftaran RPL
              When User mengakses halaman "jalur pendaftaran"
