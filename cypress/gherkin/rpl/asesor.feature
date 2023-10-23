@@ -5,7 +5,8 @@ Feature: User Login
         * "Asesor RPL" memilih modul "pmb"
 
     Scenario: Asesor mengakses halaman asesor
-        When User mengakses halaman "asesor"
+        When User mengakses halaman "penilaian rpl"
+        * User melihat statistik pendaftar
         * Asesor berada pada halaman seleksi RPL
         * Asesor melakukan penilaian RPL pendaftar "ALI AKBAR"
         * Asesor kembali ke halaman list dan melihat status pendaftar "ALI AKBAR"
