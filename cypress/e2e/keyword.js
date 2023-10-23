@@ -43,7 +43,7 @@ const url = {
   "jalur seleksi" : "spmbfront/jalur-seleksi",
   "penilaian rpl": "spmb/seleksi_rpl",
 
-  // Pengaturan Aplikasi
+  // Administrasi Aplikasi
   "pengaturan aplikasi": "admin/ms_setting"
 }
 When('User mengakses halaman {string}', (pageName)=>{
