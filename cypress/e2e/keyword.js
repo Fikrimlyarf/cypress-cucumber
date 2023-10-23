@@ -24,6 +24,9 @@ When('{string} memilih modul {string}', (user, modul)=>{
       } else if (modul === "pmb"){
         cy.get(".spmb").click()
         cy.get('#spmb').contains(user).should('be.visible').click()
+      } else if (modul === "administrasi aplikasi"){
+        cy.get(".admin > .inner").click()
+        cy.get("#admin").contains(user).should('be.visible').click()
       }
     }
 })
@@ -38,8 +41,10 @@ const url = {
   "jalur pendaftaran": "spmb/ms_jalurpendaftaran",
   "periode pendaftaran": "spmb/list_periode",
   "jalur seleksi" : "spmbfront/jalur-seleksi",
-  "penilaian rpl": "spmb/seleksi_rpl"
+  "penilaian rpl": "spmb/seleksi_rpl",
 
+  // Pengaturan Aplikasi
+  "pengaturan aplikasi": "admin/ms_setting"
 }
 When('User mengakses halaman {string}', (pageName)=>{
   const pageUrl = url[pageName]
