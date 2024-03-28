@@ -4,6 +4,12 @@ When ("Asesor berada pada halaman seleksi RPL", () => {
     cy.url().should('eq', 'http://localhost/siacloud/spmb/seleksi_rpl')
 })
 
+When ("User melihat statistik pendaftar", () => {
+    cy.get('.statistik').invoke('text').then((text) => {
+        cy.log(text)
+    })
+})
+
 When ("Asesor melakukan penilaian RPL pendaftar {string}", (namaPendaftar) => {
     cy.get("#sub-peminat-penilaian_rpl").click()
     cy.get('#sub-peminat-penilaian_rpl > h4 > .badge').invoke('text').then((text) => {
@@ -54,15 +60,15 @@ When ("Asesor melakukan penilaian RPL pendaftar {string}", (namaPendaftar) => {
     })
 
     cy.get('#btn-simpan').click()
-})
+}) 
 
 When ("Asesor kembali ke halaman list dan melihat status pendaftar {string}", (namaPendaftar) => {
-  cy.get('#btn-back').click()
-  cy.get('#search-input').clear().type(namaPendaftar + '{enter}')
+    cy.get('#btn-back').click()
+    cy.get('#search-input').clear().type(namaPendaftar + '{enter}')
 
-  // Masuk ke detail pendaftar untuk memberikan nilai
-  cy.get('.col-sm-12').contains(namaPendaftar).parent().parent().next().next().next().children().invoke('text').then((text) => {
-    cy.log('Status penilaian pendaftar: ' + text)
-  })
+    // Masuk ke detail pendaftar untuk memberikan nilai
+    cy.get('.col-sm-12').contains(namaPendaftar).parent().parent().next().next().next().children().invoke('text').then((text) => {
+        cy.log('Status penilaian pendaftar: ' + text)
+    })
     
 })
