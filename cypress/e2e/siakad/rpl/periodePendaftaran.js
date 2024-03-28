@@ -1,6 +1,6 @@
 import { When } from "@badeball/cypress-cucumber-preprocessor"
-import dataPeriod from "../../fixtures/rpl/periodePendaftaran.json"
-import dataProdi from "../../fixtures/rpl/prodi.json"
+import dataPeriod from "../../../fixtures/rpl/periodePendaftaran.json"
+import dataProdi from "../../../fixtures/rpl/prodi.json"
 
 When ("User menambahkan {string} dengan jalur RPL", (menu) => {
     if (menu == "periode pendaftaran") {
