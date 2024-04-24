@@ -1,9 +1,14 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import aktor from '../../cypress/fixtures/login/login_user.json'
 
+//pilih env
+Given ('Admin mengakses modul Litabmas1', ()=>{
+  cy.visit(Cypress.env('litabmas'));
+})
+
 //login
 Given('User login sebagai {string}', (user)=>{
-    cy.visit('/');
+    // cy.visit(Cypress.env('litabmas'));
         aktor.list.forEach((role)=>{
           if(user === role.id){
             cy.get("#email").type(role.username);

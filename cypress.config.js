@@ -20,7 +20,6 @@ module.exports = defineConfig({
       return config
     },  
   specPattern: "**/*.feature",
-  baseUrl: "http://localhost/siacloud/gate/login/"
   },
 });
 
