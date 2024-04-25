@@ -1,5 +1,5 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-// import aktor from '../fixtures/login/login_user.json'
+import aktor from '../fixtures/login/login_user.json'
 
 
 //pilih env
@@ -7,7 +7,7 @@ Given ('User mengakses modul Litabmas', ()=>{
   cy.visit(Cypress.env('litabmas'));
 })
 
-const aktor = Cypress.env('list')
+
 //pilih role login
 When ('User login sebagai {string}', (user)=>{
         aktor.list.forEach((role)=>{
