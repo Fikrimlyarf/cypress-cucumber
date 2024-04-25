@@ -1,16 +1,15 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import aktor from '../fixtures/login/login_user.json'
 
+const aktor = Cypress.env('list')
 
 //pilih env
 Given ('User mengakses modul Litabmas', ()=>{
   cy.visit(Cypress.env('litabmas'));
 })
 
-
 //pilih role login
 When ('User login sebagai {string}', (user)=>{
-        aktor.list.forEach((role)=>{
+        aktor.forEach((role)=>{
           if(user === role.id){
             cy.get("#email").type(role.username);
             cy.get("#password").type(role.password);
@@ -26,7 +25,7 @@ When ('User konfirmasi akun', ()=>{
 
 //memilih modul berdasarkan role
 When('{string} memilih modul {string}', (user, modul)=>{
-  aktor.list.forEach((role)=>{
+  aktor.forEach((role)=>{
     if(user === role.id){
       if(modul === "akademik"){
         cy.get(".siakad > .inner").click();
