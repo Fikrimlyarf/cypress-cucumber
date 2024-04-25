@@ -1,5 +1,5 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import aktor from '../../cypress/fixtures/login/login_user.json'
+import aktor from '../fixtures/login/login_user.json'
 
 //pilih env
 Given ('Admin mengakses modul Litabmas1', ()=>{

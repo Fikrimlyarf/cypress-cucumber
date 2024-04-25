@@ -1,7 +1,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import dataMK from '../../../fixtures/mata kuliah/mata_kuliah.json'
-import rps from '../../../fixtures/mata kuliah/detail_rps.json'
-import eval from '../../../fixtures/mata kuliah/rencana_evaluasi.json'
+import dataMK from '../../../fixtures/siakad/mata kuliah/mata_kuliah.json'
+import rps from '../../../fixtures/siakad/mata kuliah/detail_rps.json'
+import eval from '../../../fixtures/siakad/mata kuliah/rencana_evaluasi.json'
 
 const fileupload = 'file upload/lorem-ipsum.pdf'
 const excelrps = 'file upload/Template Rincian RPS.xlsx'

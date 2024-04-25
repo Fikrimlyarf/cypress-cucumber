@@ -1,5 +1,5 @@
 import { When } from "@badeball/cypress-cucumber-preprocessor"
-import user from "../../fixtures/rpl/pmb-V1.json"
+import user from "../../../fixtures/siakad/rpl/pmb-V1.json"
 
 When ("Pendaftar memilih jalur RPL gelombang 4", () => {
     cy.contains('.cards-jalur', 'Gelombang 4').within(() => {
