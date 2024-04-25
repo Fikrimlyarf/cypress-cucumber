@@ -2,12 +2,12 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import aktor from '../fixtures/login/login_user.json'
 
 //pilih env
-Given ('Admin mengakses modul Litabmas1', ()=>{
+Given ('User mengakses modul Litabmas', ()=>{
   cy.visit(Cypress.env('litabmas'));
 })
 
 //login
-Given('User login sebagai {string}', (user)=>{
+When ('User login sebagai {string}', (user)=>{
     // cy.visit(Cypress.env('litabmas'));
         aktor.list.forEach((role)=>{
           if(user === role.id){
@@ -16,6 +16,10 @@ Given('User login sebagai {string}', (user)=>{
           }
         })
     cy.get(".btn-login").contains("Masuk").click();
+})
+
+When ('User konfirmasi akun', ()=>{
+  cy.get('.btn').click()
 })
 
 //memilih modul berdasarkan role
@@ -29,6 +33,9 @@ When('{string} memilih modul {string}', (user, modul)=>{
       } else if (modul === "pmb"){
         cy.get(".spmb").click()
         cy.get('#spmb').contains(user).should('be.visible').click()
+      } else if (modul === "litabmas"){
+        cy.get(".litabmas").click()
+        cy.get('#litabmas').contains(user).should('be.visible').click()
       }
     }
 })
