@@ -2,11 +2,6 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 const aktor = Cypress.env('list')
 
-//pilih env
-Given ('User mengakses modul Litabmas', ()=>{
-  cy.visit(Cypress.env('litabmas'));
-})
-
 //pilih role login
 When ('User login sebagai {string}', (user)=>{
         aktor.forEach((role)=>{
@@ -16,11 +11,6 @@ When ('User login sebagai {string}', (user)=>{
           }
         })
     cy.get(".btn-login").contains("Masuk").click();
-})
-
-//konfirmasi setelah login
-When ('User konfirmasi akun', ()=>{
-  cy.get('.btn').click()
 })
 
 //memilih modul berdasarkan role
