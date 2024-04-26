@@ -1,12 +1,8 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import Eks from '../../../fixtures/litabmas/usulan_anggota.json'
+import Eks from '../../../fixtures/litabmas/usulan anggota/usulan_anggota.json'
 
 When ('User mengakses halaman usulan anggota', ()=>{
     cy.contains('Usulan Anggota').should('be.visible').click()
-})
-
-When ('User klik tombol tambah', ()=>{
-    cy.contains('Tambah').should('be.visible').click()
 })
 
 When ('User mengisi data usulan anggota', ()=>{

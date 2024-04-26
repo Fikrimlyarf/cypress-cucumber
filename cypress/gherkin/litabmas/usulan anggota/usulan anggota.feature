@@ -10,7 +10,7 @@ Feature: Manajemen Usulan Anggota
         When User klik tombol tambah
         When User mengisi data usulan anggota
 
-    Scenario: Admin LPPM menyetujui usulan anggota
+    Scenario: Admin LPPM menyetujui usulan anggota eksternal
         When User login sebagai "Admin LPPM"
         When User konfirmasi akun
         When "Admin LPPM" memilih modul "litabmas"

@@ -1,0 +1,28 @@
+{
+    "namaKlaster" : "Pendanaan Penelitian Tren Teknologi Dibidang Sistem Pendidikan Perguruan Tinggi",
+    "maksAnggaran" : "15000000",
+    "sumberPendanaan" : "Sevima 1",
+    "jumlahAnggota" : "3 Anggota",
+    "bidangIlmu" : "Sistem Informasi",
+    "temaKegiatan" : "Generasi Milenial",
+    "output1" : "Buku referensi",
+    "output2" : "Jurnal nasional",
+    "output3" : "Jurnal nasional terakreditasi",
+    "outcome1" : "Jurnal Sinta 1",
+
+    "tglawal_daftar" : "2024-04-26",
+    "tglakhir_daftar" : "2024-04-30",
+    "tglawal_reviewadmin" : "2024-05-01",
+    "tglakhir_reviewadmin" : "2024-05-05",
+    "tglawal_penguumanadmin" : "2024-05-06",
+    "tglawal_reviewproposal" : "2024-05-08",
+    "tglakhir_reviewproposal" : "2024-05-10",
+    "tglawal_lolospendanaan" : "2024-05-11",
+    "tglawal_pelaksanaan" : "2024-05-12",
+    "tglakhir_pelaksanaan" : "2024-05-15",
+    "tglawal_report" : "2024-05-16",
+    "tglakhir_report" : "2024-05-20",
+    "tglawal_ouput" : "2024-05-21",
+    "tglakhir_output" : "2024-05-30"
+    
+}
