@@ -60,3 +60,5 @@ When('User klik tombol konfirmasi {string}', (pilih)=>{
         cy.get('[data-bb-handler="ok"]').should('be.visible').and('contain', 'Ok').click()
       }
 })
+
+
