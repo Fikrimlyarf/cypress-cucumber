@@ -10,3 +10,8 @@ Feature: Manajemen Pengajuan Pendanaan
         When User mengakses halaman pengajuan pendanaan
         When User klik tombol tambah
         When User mengisi pernyataan proposal
+        When User mengisi isian proposal
+        When User memilih anggota proposal
+        When User mengisi detail pendanaan
+        When User klik tombol kirim pengajuan
+        When User klik tombol konfirmasi pengajuan

@@ -18,3 +18,11 @@ When ('User klik tombol simpan', ()=>{
     cy.contains('Simpan').should('be.visible').click()
 })
 
+When ('User klik tombol kirim pengajuan', ()=>{
+    cy.contains('Kirim Pengajuan').should('be.visible').click()
+})
+
+When ('User klik tombol konfirmasi pengajuan', ()=>{
+    cy.contains('Ajukan Proposal').should('be.visible').click()
+})
+
