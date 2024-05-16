@@ -1,14 +1,6 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import data from '../../../fixtures/litabmas/data referensi/klaster.json'
 
-When ('User mengakses halaman data referensi', ()=>{
-    cy.contains('Data Referensi').should('be.visible').click()
-})
-
-When ('User mengakses halaman klaster pendanaan', ()=>{
-    cy.contains('Klaster Pendanaan').should('be.visible').click()
-})
-
 When ('User mengisi data informasi umum klaster', ()=>{
     cy.get('[for="kode_jenis_pendanaan_penelitian"]').click();
     cy.get('#form-control-nama_klaster').type(data.namaKlaster)
@@ -36,6 +28,7 @@ When ('User memilih output dan outcome', ()=>{
     cy.get('td').contains(data.output2).parent().find('.form-control__checkbox').click()
     cy.get('td').contains(data.output3).parent().find('.form-control__checkbox').click()
     cy.get('td').contains(data.outcome1).parent().find('.form-control__checkbox').click()
+    cy.wait(3000);
 })
 
 When ('User mengisi agenda kegiatan', ()=>{
@@ -53,6 +46,4 @@ When ('User mengisi agenda kegiatan', ()=>{
     cy.get('#form-control-agenda_kegiatan\\.9\\.waktu_selesai').type(data.tglakhir_report)
     cy.get('#form-control-agenda_kegiatan\\.11\\.waktu_mulai').type(data.tglawal_ouput)
     cy.get('#form-control-agenda_kegiatan\\.11\\.waktu_selesai').type(data.tglakhir_output)
-    
-
 })

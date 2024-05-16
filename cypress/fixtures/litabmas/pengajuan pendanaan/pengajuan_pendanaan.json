@@ -1,0 +1,25 @@
+{
+    "judulPenelitian" : "Anilisis Perbandingan Pengujian Manual dan Automation Testing Pada Website Sistem Informasi Akademik",
+    "latarBelakang" : "Pada pengembangan sistem, pengujian mempunyai bagian yang sangat penting untuk menghasilkan keluaran sistem yang berkualitas tinggi dan menguraiadanya kesalahan pada sistem. Testing sistem merupakan bagian yang tersusun dalam pembuatan system development. Software yang pernilai merupakan software yang dapat memenuhi keinginan pengguna dan sesuai perancangan serta sedikit adanya bugs. Testing juga merupakan suatu alat ukur dalam menentukan atau meninjau kualitas kinerja ataupun keandalan dari suatu aplikasi perangkat lunak sebelum dilakukan implementasi di ranah publik (real production) [1]",
+
+    "rumusan" : "Maka dalam menjaga kualitas dari software, sebelum dirilis akan melalui proses pengujian sistem. Untuk pengujian secara manual, keluaran bisa jadi tidak akurat dikarenakan human error. Pengujian manual masih bisa dilakukan yang sederhana saja, contoh seperti review aplikasi pada Play Store. Pengujian secara manual kurang dapat dipertanggungkan jika disandingkan oleh pengujian otomatis yang memanfaatkan tools dan script.",
+
+    "tujuanPenelitian" : "Dengan menggunakan automation testing akan menghemat waktu dalam pengujian dibandingkan dengan manual testing. Melakukan penelitian dengan membandingkan teknik scripting yang menggunakan automation testing. Teknik scripting dapat mengurangi biaya dalam melakukan automation testing software secara keseluruhan, mengoptimalkan kecepatan dalam pengujian mempercepat development process [3]",
+
+    "Kajian" : "Automation testing diimplementasikan pada aplikasi Hospital ManagementSystem. Hospital management system merupakan aplikasi berbasis website dan android serta API. Hospital management system berguna untuk mengatur penerimaan pasien di admisi, data pasien rawat inap dan pasien rawat jalan dapat dilakukan lebih mudah. Selain itu, Hospital management system adalah sistem yang berbasis perangkat lunak mobile dan website dikembangkan oleh mentee program studi independent bersertifikat dari kampus merdeka dengan mitra alterra academy.",
+
+    "konsep" : "Pada saat dilakukan pengujian, memakai tiga metode pengambilan datasebagai berikut: 1. Membandingkan langkah yang digunakan untuk memproses pengkerjaan manual dan automation testing, 2. Membandingkan waktu respon antara manual dan automation testing, dan 3. Membandingkan kecepatan dalam menemukan error dan bugs pada software antara manual dan automation testing",
+
+    "metode" : "Metode yang digunakan dalam penelitian dengan inplementasikan cucumber scenario memakai serenity framework. A. Software IntelliJ IDEA IntelliJ IDEA merupakan kepanjangan dari integrated development environment, yang dikembangkan dari JetBrains. Dapat digunakan oleh development untuk mengembangkan program atau aplikasi. Antar muka IntelliJ IDEA dapat terhubung keberbagai platfom, seperti VCS, Git, SVN, Mercurial, CVS, Perforce, dan TFS. IntelliJ IDEA pertama kali diluncurkan pada januari 2001 dan diusung sebagai aplikasi pengembang program java pertama dengan penavigasian dan perekstrusi kode program tingkat lanjut [4]. B. Testing Automation Automation testing melakukan pemeriksaan pada software atau sistem dengan otomatis memakai perangkat yang membantu mengerjakan scenario. Perangkat yang digunakan bisa mengelola data yang sedang dalam pengujian, dan menghasilkan detail laporan dari pengujian yang sudah dilakukan. Automation Testing menggabungkan berbagai bahasa dalam pembuatan test script, bahasa yang digunakan seperti python, java script, dan tool command language (TCL) [5]",
+    
+    "rencana" : "Pada penelitian mengambil masalah dalam pengujian otomatis pada software atau aplikasi Hospital Management System mengguakan serenity cucumber dan Jenkins. Serenity Framework yang dimanfaatkan dalam dokumen ini menghasilkan pengujian pengujian otomatis kemampuannya lebih baik dan berhasil dari pada pengujian secara manual. Dalam hasil percobaan dapat ditarik kesimpulan bahwa automated testing menggunakan serenity lebih baik dari pada manual testing",
+
+    "pustaka" : "Firman, H. F. Wowor, Dan X. Najoan, Sistem Informasi Perpustakaan Online Berbasis Web,2016. D. Galin Galin, Software Quality Assurance From Theory To Implementation Software Quality Assurance From Theory To Implementation Cyan Magenta Yellow Black. Tersedia Pada: Www.Pearsoned.Co.Uk I. Sommerville, Software Engineering. G. Ayu Syafarina, M. Amin, F. Teknologi Informasi, Dan U. Islam Kalimantan Mab Banjarmasin, Prototype Aplikasi Banjar Berbasis Android Studio Sebagai Salah Satu Petunjuk Wisata Di Banjarmasin.",
+
+
+    "usulanBiaya" : "15000000",
+    "pemilikRek" : "Kahlil Gibran",
+    "namaBank" : "BCA",
+    "noRek" : "675160001",
+    "cabBank" : "Surabaya"
+}

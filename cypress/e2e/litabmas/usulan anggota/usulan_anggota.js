@@ -1,10 +1,6 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import Eks from '../../../fixtures/litabmas/usulan anggota/usulan_anggota.json'
 
-When ('User mengakses halaman usulan anggota', ()=>{
-    cy.contains('Usulan Anggota').should('be.visible').click()
-})
-
 When ('User mengisi data usulan anggota', ()=>{
     cy.get('#form-control-nama_user').type(Eks.namaAnggota)
     cy.get('#form-control-email_user').type(Eks.emailAnggota)
