@@ -1,6 +1,17 @@
 {
-    "namaAnggota" : "Stevie Ray Vaughan",
-    "emailAnggota" : "srv@yopmail.com",
-    "nipAnggota" : "14042",
-    "asalInstitusi" : "Universitas Brawijaya"
+    "list" : [
+        {
+
+            "namaAnggota" : "Stevie Ray Vaughan",
+            "emailAnggota" : "srv@yopmail.com",
+            "nipAnggota" : "14042",
+            "asalInstitusi" : "Universitas Brawijaya"
+        },
+        {
+            "namaAnggota" : "Kurt Cobain",
+            "emailAnggota" : "kurtcobain@yopmail.com",
+            "nipAnggota" : "14043",
+            "asalInstitusi" : "Universitas Brawijaya"
+        }
+    ]
 }

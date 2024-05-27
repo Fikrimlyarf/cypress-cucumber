@@ -9,9 +9,10 @@ Feature: Manajemen Klaster Pendanaan
         When "Admin LPPM" memilih modul "litabmas"
         When User mengakses halaman data referensi
         When User mengakses halaman klaster pendanaan
-        When User klik tombol tambah
-        When User mengisi data informasi umum klaster
-        When User mengisi data bidang ilmu & tema
-        When User memilih output dan outcome
-        When User mengisi agenda kegiatan
-        When User klik tombol simpan
+        # When User klik tombol tambah
+        # When User mengisi data informasi umum klaster
+        # When User mengisi data bidang ilmu & tema
+        # When User memilih output dan outcome
+        # When User mengisi agenda kegiatan
+        When looping data
+        # When User klik tombol simpan

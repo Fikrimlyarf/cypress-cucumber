@@ -26,5 +26,4 @@ Feature: Manajemen Usulan Anggota
 
     Scenario: Admin LPPM melakukan assign reviewer proposal
         When User mengakses halaman penilaian assign reviewer
-        When User klik tombol tambahkan reviewer
         When User menentukan reviewer

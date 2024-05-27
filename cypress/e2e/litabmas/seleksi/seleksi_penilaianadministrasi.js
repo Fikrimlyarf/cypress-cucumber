@@ -1,4 +1,5 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
+import data from '../../../fixtures/litabmas/seleksi/penilaian_administrasi.json'
 
 const filesimilarity = 'file upload/lorem-ipsum.pdf'
 
@@ -30,9 +31,12 @@ When ('User mengisi aspek ai', ()=> {
 })
 
 When ('User menentukan reviewer', ()=> {
+  data.list.forEach((rev)=>{
+    cy.get('[data-target="#modal-tambah-reviewer"]').should('be.visible').click()
     cy.get('#modal-tambah-reviewer > .modal__wrapper > form > .modal__body > .modal__content-input > :nth-child(1) > .form-control__group > .choices > .choices__inner').click()
-    cy.get('.choices__list').contains('0650589 - Mick Jagger (Internal)').click();
+    cy.get('.choices__list').contains(rev.reviewer).click();
     cy.get('#form-control-id_dokumen_sk').attachFile(filesimilarity)
     cy.contains('Simpan').click()
     cy.get('.alert_success').should('contain','Berhasil menambahkan reviewer')
+  })
 })
