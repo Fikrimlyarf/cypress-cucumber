@@ -4,9 +4,9 @@ Feature: Manajemen Pengajuan Pendanaan
         Given User mengakses modul Litabmas
 
     Scenario: Dosen membuat pengajuan pendanaan
-        When User login sebagai "Dosen"
+        When User login sebagai "Dosen Kahlil"
         When User konfirmasi akun
-        When "Dosen" memilih modul "litabmas"
+        When "Dosen Kahlil" memilih modul "litabmas"
         When User mengakses halaman kegiatan
         When User mengakses halaman pengajuan pendanaan
         When User klik tombol tambah
@@ -18,7 +18,7 @@ Feature: Manajemen Pengajuan Pendanaan
         When User klik tombol konfirmasi pengajuan
 
     Scenario: Dosen eksternal menerima undangan proposal
-        When User login sebagai "Dosen Eksternal"
+        When User login sebagai "Dosen Stevie"
         When User mengakses halaman kegiatan
         When User mengakses halaman pengajuan pendanaan
         When User mengkorfimasi undangan anggota proposal
