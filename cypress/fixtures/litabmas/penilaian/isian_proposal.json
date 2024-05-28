@@ -1,0 +1,24 @@
+{
+    "feedback1": {
+        "judul": "Judul sudah mencakup keseluruhan proposal tinggal tambahkan tool atau konsep yang digunakan untuk eksekusi",
+        "latar": "Latar belakang bisa diperluas dengan data statistik atau contoh konkret yang menggambarkan dampak kesalahan dalam pengujian sistem informasi akademik. Ini akan memperkuat argumen mengenai pentingnya topik yang diteliti.",
+        "masalah": "Rumusan masalah bisa lebih spesifik dengan mencantumkan masalah yang lebih terukur dan operasional, misalnya, Berapa banyak waktu yang dapat dihemat dengan automation testing dibandingkan manual testing dalam pengujian sistem informasi akademik?",
+        "tujuan": "Tujuan penelitian dapat diperkuat dengan menambahkan hasil yang diharapkan secara lebih konkret, misalnya, menghemat waktu pengujian sebesar X%  atau mengurangi biaya pengujian sebesar Y%",
+        "kajian": "Sebaiknya dijelaskan lebih lanjut mengenai tools dan teknik scripting yang akan digunakan dalam automation testing, serta alasan pemilihannya.",
+        "konsep": "Menambahkan tabel, grafik, atau diagram yang mendukung perbandingan antara pengujian manual dan otomatis dapat membantu memperjelas dan memperkuat poin-poin yang disampaikan",
+        "metode": "Sangat penting untuk menjelaskan metode yang akan digunakan untuk membandingkan pengujian manual dan otomatis, termasuk desain eksperimen, alat yang akan digunakan, dan cara pengumpulan serta analisis data.",
+        "rencana": "Menambahkan tabel, grafik, atau diagram yang mendukung perbandingan antara pengujian manual dan otomatis dapat membantu memperjelas dan memperkuat poin-poin yang disampaikan",
+        "pustaka": "Kajian peneliti terdahulu bisa ditambah dengan lebih banyak referensi dari penelitian yang relevan untuk memberikan gambaran yang lebih komprehensif mengenai topik ini."
+    },
+    "feedback2": {
+        "judul": "Judul ini jelas dan langsung menunjukkan bahwa penelitian akan membandingkan dua metode pengujian, yaitu pengujian manual dan otomatis.",
+        "latar": "Latar belakang bisa lebih kaya dengan menyertakan data statistik atau contoh konkret dari kasus nyata yang menunjukkan dampak positif dari pengujian otomatisasi dibandingkan manual dalam konteks sistem informasi akademik.",
+        "masalah": "Pastikan penggunaan bahasa yang konsisten dan jelas di seluruh bagian proposal untuk meningkatkan keterbacaan dan pemahaman.",
+        "tujuan": "Sertakan indikator keberhasilan yang jelas untuk mengukur hasil penelitian ini, seperti metrik efisiensi waktu, biaya, dan kualitas pengujian.",
+        "kajian": "Kajian peneliti terdahulu dapat diperluas dengan lebih banyak referensi dan diskusi tentang penelitian-penelitian sebelumnya yang relevan. Ini akan memperkuat landasan teori dan menunjukkan bahwa penelitian ini didasarkan pada kajian literatur yang komprehensif.",
+        "konsep": "Penjelasan tentang tiga metode pengambilan data yang disebutkan bisa lebih mendetail, menjelaskan mengapa ketiga metode ini penting dan bagaimana mereka akan diterapkan dalam penelitian ini.",
+        "metode": "Metodologi penelitian bisa diperinci lebih lanjut dengan menjelaskan langkah-langkah konkret yang akan diambil selama penelitian, termasuk bagaimana data akan dikumpulkan, dianalisis, dan dibandingkan.",
+        "rencana": "Rencana pembahasan sebaiknya mencakup lebih banyak detail tentang bagaimana hasil dari pengujian manual dan otomatis akan dibandingkan, serta metrik atau indikator keberhasilan yang akan digunakan untuk menilai kinerja masing-masing metode.",
+        "pustaka": "Tambahkan referensi dari 3-5 tahun terakhir dari jurnal seperti IEEE Transactions on Software Engineering, Journal of Systems and Software, atau konferensi seperti ICSE (International Conference on Software Engineering)."
+    }
+}

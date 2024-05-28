@@ -35,6 +35,10 @@ When ('User memilih section pengabdian masyarakat', ()=> {
     cy.contains('Pengabdian Masyarakat').should('be.visible').click()
 })
 
+When ('Reviewer klik tombol berikan feedback', ()=> {
+    cy.get('.btn.btn_primary.btn_sm').should('contain', 'Berikan Feedback').click()
+})
+
 //validai dokumen oleh admin
 When('User klik tombol validasi dokumen {string}', (validasi) => {
     if (validasi == "Dokumen Tidak Lengkap") {
@@ -110,4 +114,14 @@ When ('User mengakses halaman penilaian similarity & AI', ()=> {
 When ('User mengakses halaman penilaian assign reviewer', ()=> {
     cy.contains('Assign Reviewer').should('be.visible').click()
 })
+
+When ('User mengakses halaman penilaian', ()=> {
+    cy.contains('Penilaian').should('be.visible').click()
+})
+
+When ('User mengakses halaman penilaian isian proposal', ()=> {
+    cy.contains('Penilaian Isian Proposal').should('be.visible').click()
+    cy.url().should('include', '/penilaian-isian')
+})
+
 
