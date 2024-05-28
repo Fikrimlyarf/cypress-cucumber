@@ -80,6 +80,15 @@ When ('User mengakses halaman data referensi', ()=>{
     cy.contains('Data Referensi').should('be.visible').click()
 })
 
+When ('User mengakses halaman aspek penilaian', ()=>{
+    cy.contains('Aspek Penilaian').should('be.visible').click()
+})
+
+When ('User mengakses halaman penilaian aspek proposal', ()=>{
+    cy.contains('Penilaian Aspek Proposal').should('be.visible').click()
+    cy.url().should('include', '/penilaian-komposisi-proposal')
+})
+
 When ('User mengakses halaman klaster pendanaan', ()=>{
     cy.contains('Klaster Pendanaan').should('be.visible').click()
     cy.url().should('include', '/klaster-pendanaan');

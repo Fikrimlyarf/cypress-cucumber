@@ -1,0 +1,35 @@
+{
+    "list" : [
+        {
+            "no" : "1",
+            "aspek" : "Latar Belakang Masalah",
+            "bobot" : "10"
+        },
+        {
+            "no" : "2",
+            "aspek" : "Rumusan masalah dan Tujuan",
+            "bobot" : "10"
+        },
+        {
+            "no" : "3",
+            "aspek" : "Kajian hasil riset sebelumnya yang berkaitan",
+            "bobot" : "30"
+        },
+        {
+            "no" : "4",
+            "aspek" : "Ketepatan penggunaan metode dan teori",
+            "bobot" : "20"
+        },
+        {
+            "no" : "5",
+            "aspek" : "Originalitas, urgensi dan manfaat",
+            "bobot" : "20"
+        },
+        {
+            "no" : "6",
+            "aspek" : "Alokasi biaya dan waktu",
+            "bobot" : "10"
+        }
+    ]
+    
+}
