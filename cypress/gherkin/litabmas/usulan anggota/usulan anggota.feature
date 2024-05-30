@@ -5,7 +5,7 @@ Feature: Manajemen Usulan Anggota
     Scenario: Dosen Internal membuat pengajuan anggota eksternal
         When User login sebagai "Dosen Kahlil"
         When User konfirmasi akun
-        When "Dosen Kahlil" memilih modul "litabmas"
+        When Dosen memilih modul "litabmas"
         When User mengakses halaman usulan anggota
         When User mengisi data usulan anggota
 

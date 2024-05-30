@@ -8,6 +8,7 @@ module.exports = defineConfig({
   viewportWidth: 1280,
   viewportHeight: 800,
   chromeWebSecurity: false,
+  watchForFileChanges: false,
   video: false,
   e2e: {
     async setupNodeEvents(on, config) {

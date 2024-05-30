@@ -41,7 +41,7 @@ When ('User mengisi isian proposal', ()=>{
   cy.get('[data-name="isian_proposal__penelitian__8"]').type(pendanaan.rencana)
   cy.get('[data-name="isian_proposal__penelitian__9"]').type(pendanaan.pustaka)
   cy.get('[name="id_dokumen_proposal"]').attachFile(fileproposal)
-  cy.wait(3000);
+  cy.wait(1000);
 })
 
 When ('User memilih anggota proposal', ()=>{

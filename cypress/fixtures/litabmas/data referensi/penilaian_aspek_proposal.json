@@ -3,32 +3,38 @@
         {
             "no" : "1",
             "aspek" : "Latar Belakang Masalah",
-            "bobot" : "10"
+            "bobot" : "10",
+            "nilai" : "3 (Cukup)"
         },
         {
             "no" : "2",
             "aspek" : "Rumusan masalah dan Tujuan",
-            "bobot" : "10"
+            "bobot" : "10",
+            "nilai" : "4 (Baik)"
         },
         {
             "no" : "3",
             "aspek" : "Kajian hasil riset sebelumnya yang berkaitan",
-            "bobot" : "30"
+            "bobot" : "30",
+            "nilai" : "2 (Kurang Baik)"
         },
         {
             "no" : "4",
             "aspek" : "Ketepatan penggunaan metode dan teori",
-            "bobot" : "20"
+            "bobot" : "20",
+            "nilai" : "4 (Baik)"
         },
         {
             "no" : "5",
             "aspek" : "Originalitas, urgensi dan manfaat",
-            "bobot" : "20"
+            "bobot" : "20",
+            "nilai" : "5 (Sangat Baik)"
         },
         {
             "no" : "6",
             "aspek" : "Alokasi biaya dan waktu",
-            "bobot" : "10"
+            "bobot" : "10",
+            "nilai" : "1 (Sangat Kurang Baik)"
         }
     ]
     
