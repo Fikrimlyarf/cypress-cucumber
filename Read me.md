@@ -1,3 +1,19 @@
+# Running Flow Litabmas
+1. Running usulan anggota eksternal
+> usulan anggota.feature
+2. Running data maser terlebih dahulu 
+> penilaian aspek proposal.feature
+> klaster.feature
+>> untuk tanggal agenda klaster yang ada pada fixture pastikan terupdate
+3. Running pengajuan pendanaan
+> pengajuan pendanaan.feature
+4. Running seleksi
+> penilaian administrasi.feature
+>> running jalankan 2x karena case pertama adalah pembatalan yg pasti akan gagal
+5. Running penilaian
+> isian proposal.feature
+>> pastikan array kolom input feedbact terupdate
+
 # cypress-cucumber Installation
 
 Untuk menginstall semua package
