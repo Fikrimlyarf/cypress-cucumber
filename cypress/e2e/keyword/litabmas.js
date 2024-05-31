@@ -138,4 +138,9 @@ When ('User mengakses halaman penilaian isian proposal', ()=> {
     cy.url().should('include', '/penilaian-isian')
 })
 
+When ('User mengakses halaman aktivitas penelitian', ()=> {
+    cy.contains('Aktivitas Penelitian').should('be.visible').click()
+    cy.url().should('include', '/aktivitas-penelitian')
+})
+
 
