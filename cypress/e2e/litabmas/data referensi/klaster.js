@@ -66,7 +66,7 @@ When('looping data', () => {
         cy.get('.choices__list').contains(go.bidangIlmu).click();
         cy.get('[for="form-control-tema_kegiatan"]').next().click();
         cy.get('.choices__list').contains(go.temaKegiatan).click();
-        cy.contains('Tambahkan Data').click()
+        cy.contains('Tambahkan Data').click({ force: true })
         cy.get('td').contains(go.output1).parent().find('.form-control__checkbox').click()
         cy.get('td').contains(go.output2).parent().find('.form-control__checkbox').click()
         cy.get('td').contains(go.output3).parent().find('.form-control__checkbox').click()

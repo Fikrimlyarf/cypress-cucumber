@@ -24,7 +24,7 @@ When ('User klik tombol kirim pengajuan', ()=>{
 })
 
 When ('User klik tombol konfirmasi pengajuan', ()=>{
-    cy.contains('Ajukan Proposal').should('be.visible').click()
+    cy.contains('Ajukan Proposal').should('be.visible').click({ force: true })
 })
 
 When ('User memilih section penelitian', ()=> {
@@ -141,6 +141,11 @@ When ('User mengakses halaman penilaian isian proposal', ()=> {
 When ('User mengakses halaman aktivitas penelitian', ()=> {
     cy.contains('Aktivitas Penelitian').should('be.visible').click()
     cy.url().should('include', '/aktivitas-penelitian')
+})
+
+When ('User mengakses halaman daftar bimbingan', ()=> {
+    cy.contains('Daftar Bimbingan').should('be.visible').click()
+    cy.url().should('include', '/bimbingan')
 })
 
 
