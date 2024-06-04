@@ -1,27 +1,27 @@
 {
     "list" : [
         {
-            "feedback" : "1",
+            "feedback" : "Tambahkan data yang didapat setelah observasi, dan lampirkan juga contohnya seperti file ini",
             "filefeedback" : "lorem-ipsum.pdf"
         },
         {
-            "feedback" : "2",
+            "feedback" : "Tambahkan tool itu berjalan seperti apa disana dan dampak serta manfaat",
             "filefeedback" : "lorem-ipsum.pdf"
         },
         {
-            "feedback" : "3",
+            "feedback" : "Tulisknan nama-nama yang di wawancarai dan pertanyaannya apa saja",
             "filefeedback" : "fire.png"
         },
         {
-            "feedback" : "4",
+            "feedback" : "lampiran cukup lengkap",
             "filefeedback" : "lorem-ipsum.pdf"
         },
         {
-            "feedback" : "5",
+            "feedback" : "Minimal responden jadikan 100 orang",
             "filefeedback" : "fire.png"
         },
         {
-            "feedback" : "6",
+            "feedback" : "Hasil analisis tolong jelaskan secara langsung ke saya, bisa lewat zoom",
             "filefeedback" : "lorem-ipsum.pdf"
         }
     ]

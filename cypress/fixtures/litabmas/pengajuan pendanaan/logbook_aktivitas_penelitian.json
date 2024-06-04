@@ -2,7 +2,7 @@
     "list" : [
         {
             "tgl" : "10",
-            "tanggal" : "10/05/2024",
+            "tanggal" : "10/06/2024",
             "aktivitas" : "Datang ke lokasi untuk mengetahui cara QA melakukan pengujian",
             "jenis" : "Observasi",
             "tempat" : "Sevima gedung HQ",
@@ -10,7 +10,7 @@
         },
         {
             "tgl" : "12",
-            "tanggal" : "12/05/2024",
+            "tanggal" : "12/06/2024",
             "aktivitas" : "Datang ke lokasi untuk mengetahui tool yang sudah pernah atau sedang digunakan",
             "jenis" : "Observasi",
             "tempat" : "Sevima gedung HQ",
@@ -19,7 +19,7 @@
         {
             
             "tgl" : "15",
-            "tanggal" : "15/05/2024",
+            "tanggal" : "15/06/2024",
             "aktivitas" : "Mengumpulkan data dengan cara wawancara dari setia[ personil QA",
             "jenis" : "Wawancara",
             "tempat" : "Sevima gedung HQ",
@@ -27,7 +27,7 @@
         },
         {
             "tgl" : "20",
-            "tanggal" : "20/05/2024",
+            "tanggal" : "20/06/2024",
             "aktivitas" : "Diskusi dengan para QA terkait pengalaman, kendala, dan capaian",
             "jenis" : "Forum Group Discussion",
             "tempat" : "Sevima gedung HQ",
@@ -35,15 +35,15 @@
         },
         {
             "tgl" : "23",
-            "tanggal" : "23/05/2024",
+            "tanggal" : "23/06/2024",
             "aktivitas" : "Penyebaran angket untuk mendapatakan data experience",
             "jenis" : "Penyebaran Angket",
             "tempat" : "Sevima gedung HQ",
             "pendukung" : "lorem-ipsum.pdf"
         },
         {
-            "tgl" : "27",
-            "tanggal" : "27/05/2024",
+            "tgl" : "26",
+            "tanggal" : "26/06/2024",
             "aktivitas" : "Menganalisi hasil dari observasi, wawancara, diskusi, dan angket",
             "jenis" : "Analisis Dokumen",
             "tempat" : "Sevima gedung HQ",

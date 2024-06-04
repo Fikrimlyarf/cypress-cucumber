@@ -4,7 +4,7 @@ Feature: Dosen melakukan bimbinga proposal
         Given User mengakses modul Litabmas
 
     Scenario: dosen memberikan feedback bimbingan
-        When User login sebagai "Dosen Mick"
+        When User login sebagai "Dosen Kahlil"
         When User konfirmasi akun
         When Dosen memilih modul "litabmas"
         When User mengakses halaman daftar bimbingan

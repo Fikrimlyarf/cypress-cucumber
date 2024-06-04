@@ -39,6 +39,10 @@ When ('Reviewer klik tombol berikan feedback', ()=> {
     cy.get('.btn.btn_primary.btn_sm').should('contain', 'Berikan Feedback').click()
 })
 
+When ('User klik tombol berikan penilaian', ()=> {
+    cy.get('.btn.btn_primary.btn_sm').should('be.visible').click()
+})
+
 //validai dokumen oleh admin
 When('User klik tombol validasi dokumen {string}', (validasi) => {
     if (validasi == "Dokumen Tidak Lengkap") {
@@ -146,6 +150,16 @@ When ('User mengakses halaman aktivitas penelitian', ()=> {
 When ('User mengakses halaman daftar bimbingan', ()=> {
     cy.contains('Daftar Bimbingan').should('be.visible').click()
     cy.url().should('include', '/bimbingan')
+})
+
+When ('User mengakses halaman laporan progress report', ()=> {
+    cy.contains('Laporan Progress Report').should('be.visible').click()
+    cy.url().should('include', '/laporan-progres')
+})
+
+When ('User mengakses halaman penilaian progress report', ()=> {
+    cy.contains('Penilaian Progress Report').should('be.visible').click()
+    cy.url().should('include', '/penilaian-progres')
 })
 
 

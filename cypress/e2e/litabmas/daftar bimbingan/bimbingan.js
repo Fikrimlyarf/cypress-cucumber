@@ -10,15 +10,15 @@ When('User melihat detail proposal untuk mengisi feedback bimbingan', () => {
 })
 
 When('User pembimbing 1 memberikan feedback bimbingan', () => {
-    logbook.list.forEach((log, i) => {
+    logbook.list.forEach((log, book) => {
         cy.get('td').contains(log.aktivitas).parent().find('.btn.btn_outline.btn_xs').last().click()
-        bimbingan.list.forEach((pbng, index) => {
-            cy.get('[data-cy="feedback_logbook"]').type(pbng.feedback)
-            cy.get('[data-cy="id_dokumen_feedback_logbook"]').attachFile('file upload/' + pbng.filefeedback)
-            cy.contains('Simpan').should('be.visible').click()
-            cy.get('.alert').should('be.visible')
-
-
+        bimbingan.list.forEach((bimbingan, komen) => {
+            if (book == komen) {
+                cy.get('[data-cy="feedback_logbook"]').clear().type(bimbingan.feedback)
+                cy.get('[data-cy="id_dokumen_feedback_logbook"]').attachFile('file upload/' + bimbingan.filefeedback)
+                cy.contains('Simpan').should('be.visible').click()
+                cy.get('.alert').should('be.visible')
+            }
         })
     })
 })
